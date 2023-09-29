@@ -1,0 +1,349 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_83880"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "90c9705e-cabf-4939-ac35-a36b56a2a5eb"
+          },
+          "type": "Request",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Estado",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Return_value(s)_to_Power_Virtual_Agents": {
+          "runAfter": {
+            "Valida_si_recibio_algun_dato": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5060c769-6946-4fb8-83cb-74621ad00f8c"
+          },
+          "type": "Response",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "municipios": "@variables('Municipios')",
+              "bool_municipios": "@{variables('Encontro_Municipios')}",
+              "estado_confirmado": "@variables('Estado_Confirmado')"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "municipios": {
+                  "title": "Municipios",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "bool_municipios": {
+                  "title": "Bool_Municipios",
+                  "x-ms-dynamically-added": true,
+                  "type": "boolean"
+                },
+                "estado_confirmado": {
+                  "title": "Estado_Confirmado",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Valida_si_recibio_algun_dato": {
+          "actions": {
+            "No_encontro_municipios": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "5cfcad4b-13cf-4bd7-91fb-46871d3dc380"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Encontro_Municipios",
+                "value": "@false"
+              }
+            }
+          },
+          "runAfter": {
+            "Estado_Seleccionado": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Obtiene_municipios": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "40ff4411-b2c1-4a0e-b117-0bb27498754b"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "cap_bd_hospitaleses",
+                    "$select": "cap_estado,cap_municipio",
+                    "$filter": "cap_estado eq '@{substring(triggerBody()['text'],0,sub(length(triggerBody()['text']),1))}'",
+                    "$top": 1000
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Existen_municipios_en_ese_estado": {
+                "actions": {
+                  "No_hay_municipios": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "33fc2d66-970b-4390-a170-87f41956170d"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Encontro_Municipios",
+                      "value": "@false"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "Obtiene_municipios": [
+                    "Succeeded"
+                  ]
+                },
+                "else": {
+                  "actions": {
+                    "Select": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "4283f1d7-caf8-462d-a02b-61d09eb3b511"
+                      },
+                      "type": "Select",
+                      "inputs": {
+                        "from": "@outputs('Obtiene_municipios')?['body/value']",
+                        "select": {
+                          "Municipio": "@item()?['cap_municipio']"
+                        }
+                      }
+                    },
+                    "Establece_los_municipios_encontrados_aplicando_un_union": {
+                      "runAfter": {
+                        "Select": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "3203a7e8-f1c8-4a6c-8cd1-ad70bf720a4b"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Municipios_Array",
+                        "value": "@union(body('Select'),body('Select'))"
+                      }
+                    },
+                    "Apply_to_each": {
+                      "foreach": "@variables('Municipios_Array')",
+                      "actions": {
+                        "Asigna_los_municipios_en_un_listado": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "2fbc8c21-c1ec-4cf0-b43a-bc476d740ab4"
+                          },
+                          "type": "AppendToStringVariable",
+                          "inputs": {
+                            "name": "Municipios",
+                            "value": "@{items('Apply_to_each')?['Municipio']},\n"
+                          }
+                        }
+                      },
+                      "runAfter": {
+                        "Establece_los_municipios_encontrados_aplicando_un_union": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "3aa84e53-8653-46dc-b3de-780b06511e43"
+                      },
+                      "type": "Foreach",
+                      "runtimeConfiguration": {
+                        "concurrency": {
+                          "repetitions": 50
+                        }
+                      }
+                    },
+                    "Si_encontro_municipios": {
+                      "runAfter": {
+                        "Apply_to_each": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "31a492cd-94db-44fb-b4e2-6381ce390e6f"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Encontro_Municipios",
+                        "value": "@true"
+                      }
+                    },
+                    "Guarda_el_estado": {
+                      "runAfter": {
+                        "Si_encontro_municipios": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "64cd51ae-e28d-41ba-9e2d-bb47f4b04245"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Estado_Confirmado",
+                        "value": "@{substring(triggerBody()['text'],0,sub(length(triggerBody()['text']),1))}"
+                      }
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@length(outputs('Obtiene_municipios')?['body/value'])",
+                    0
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "a3f943a2-fc89-4678-b00d-fcf26f0e75e8"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "lessOrEquals": [
+              "@length(triggerBody()['text'])",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "47036f5d-b7e1-4f58-bd32-bb2b54f38a96"
+          },
+          "type": "If"
+        },
+        "Encontro_Municipios": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "a6725bfb-cde6-4ded-ad54-54173763d698"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Encontro_Municipios",
+                "type": "boolean"
+              }
+            ]
+          }
+        },
+        "Municipios_Arreglo": {
+          "runAfter": {
+            "Encontro_Municipios": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "c3dd7381-0b45-4aca-b07b-d04a2b7ee4ac"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Municipios_Array",
+                "type": "array"
+              }
+            ]
+          }
+        },
+        "Municipios": {
+          "runAfter": {
+            "Municipios_Arreglo": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "df650ea1-54c5-415b-8563-596a613b6aec"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Municipios",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Estado_Seleccionado": {
+          "runAfter": {
+            "Municipios": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "5ab61a4a-8be8-49ad-966e-2271e743fb7c"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Estado_Confirmado",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "c9cd2c4e691a4646adc8aa592c88489b"
+  },
+  "schemaVersion": "1.0.0.0"
+}

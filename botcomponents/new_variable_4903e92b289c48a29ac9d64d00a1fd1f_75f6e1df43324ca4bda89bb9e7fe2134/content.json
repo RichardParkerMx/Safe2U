@@ -1,0 +1,20 @@
+{
+  "contextVariables": [
+    {
+      "systemType": "String",
+      "initializerType": "Expression",
+      "scope": "Session",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('b2aa8e50-fe10-49e8-ae32-c525649a18cb')['hospitales']",
+      "isGlobal": true,
+      "id": "new_variable_4903e92b289c48a29ac9d64d00a1fd1f_75f6e1df43324ca4bda89bb9e7fe2134",
+      "displayName": "Hospitales",
+      "createdTime": "2023-09-25T05:07:00.8689545Z",
+      "updatedTime": "2023-09-25T05:07:00.8689546Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ]
+}

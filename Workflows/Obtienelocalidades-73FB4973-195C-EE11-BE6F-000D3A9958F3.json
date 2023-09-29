@@ -1,0 +1,357 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_83880"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "8a56f5d7-2bf2-47bc-abed-e034dd3c7be6"
+          },
+          "type": "Request",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Municipio_Seleccionado",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_1": {
+                  "title": "Estado_Confirmado",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text",
+                "text_1"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Return_value(s)_to_Power_Virtual_Agents": {
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "89722f81-2a3a-44f8-8b5c-299b980a4468"
+          },
+          "type": "Response",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "localidades": "@variables('Localidades')",
+              "bool_localidades": "@{variables('Encontro_Localidades')}",
+              "municipio:confirmado": "@variables('Municipio_Confirmado')"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "localidades": {
+                  "title": "Localidades",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "bool_localidades": {
+                  "title": "Bool_Localidades",
+                  "x-ms-dynamically-added": true,
+                  "type": "boolean"
+                },
+                "municipio:confirmado": {
+                  "title": "Municipio:Confirmado",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "Encontro_Localidades": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "6475a18d-00c2-4b90-8023-5d723870d9a6"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Encontro_Localidades",
+                "type": "boolean"
+              }
+            ]
+          }
+        },
+        "Localidades_arreglo": {
+          "runAfter": {
+            "Encontro_Localidades": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6c77b608-dc3d-4a17-a215-9ad136ad0415"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Localidades_Arreglo",
+                "type": "array"
+              }
+            ]
+          }
+        },
+        "Localidades": {
+          "runAfter": {
+            "Localidades_arreglo": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "06be581b-16bc-4ab2-8eb8-baf32b07009e"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Localidades",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Municipio_seleccionado": {
+          "runAfter": {
+            "Localidades": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "40653ee0-8e75-4cfe-9355-7e39587fe845"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Municipio_Confirmado",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Condition": {
+          "actions": {
+            "No_encontro_localidades": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "d925cf3c-4a19-438c-8972-9ed4b44db048"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Encontro_Localidades",
+                "value": "@false"
+              }
+            }
+          },
+          "runAfter": {
+            "Municipio_seleccionado": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "Obtiene_localidades": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "0f20aa17-985c-434b-92ee-ef942e6178da"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "cap_bd_hospitaleses",
+                    "$select": "cap_estado,cap_municipio,cap_localidad",
+                    "$filter": "cap_estado eq '@{triggerBody()['text_1']}' and cap_municipio eq '@{substring(triggerBody()['text'],0,sub(length(triggerBody()['text']),1))}'",
+                    "$top": 100
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Existen_localidades": {
+                "actions": {
+                  "No_encontro_localidades_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "64de9d5b-4afe-4304-a231-d712b88141c5"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Encontro_Localidades",
+                      "value": "@false"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "Obtiene_localidades": [
+                    "Succeeded"
+                  ]
+                },
+                "else": {
+                  "actions": {
+                    "Select": {
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "2e9a9b28-57a7-4df3-b5fe-1e128abf1191"
+                      },
+                      "type": "Select",
+                      "inputs": {
+                        "from": "@outputs('Obtiene_localidades')?['body/value']",
+                        "select": {
+                          "Localidad": "@item()?['cap_localidad']"
+                        }
+                      }
+                    },
+                    "Establecel_las_localidades_encontradas_aplicando_un_union": {
+                      "runAfter": {
+                        "Select": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "d9cdc8b1-dda6-424d-b740-22408f13803d"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Localidades_Arreglo",
+                        "value": "@union(body('Select'),body('Select'))"
+                      }
+                    },
+                    "Apply_to_each": {
+                      "foreach": "@variables('Localidades_Arreglo')",
+                      "actions": {
+                        "Append_to_string_variable": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "0c2bbe6c-c47e-404c-82be-a0f1b9e22362"
+                          },
+                          "type": "AppendToStringVariable",
+                          "inputs": {
+                            "name": "Localidades",
+                            "value": "@{items('Apply_to_each')?['Localidad']},\n"
+                          }
+                        }
+                      },
+                      "runAfter": {
+                        "Establecel_las_localidades_encontradas_aplicando_un_union": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "82161936-227c-47bc-a5c2-13cf804c69c2"
+                      },
+                      "type": "Foreach",
+                      "runtimeConfiguration": {
+                        "concurrency": {
+                          "repetitions": 50
+                        }
+                      }
+                    },
+                    "Si_encontro_localidades_": {
+                      "runAfter": {
+                        "Apply_to_each": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "f4965c3c-e1d7-4404-8dd0-3fa4dedbb5bd"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Encontro_Localidades",
+                        "value": "@true"
+                      }
+                    },
+                    "Guarda_el_municipio": {
+                      "runAfter": {
+                        "Si_encontro_localidades_": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "7b1c3bf5-b94b-4e7d-bf2a-a4d111ca1e4c"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Municipio_Confirmado",
+                        "value": "@{substring(triggerBody()['text'],0,sub(length(triggerBody()['text']),1))}"
+                      }
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@length(outputs('Obtiene_localidades')?['body/value'])",
+                    0
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "bb2da0c3-08c9-4d18-a916-9833dbec277e"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "lessOrEquals": [
+              "@length(triggerBody()['text'])",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "834eb9f3-1a0f-48b4-b1a9-2161ccede06f"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "c9cd2c4e691a4646adc8aa592c88489b"
+  },
+  "schemaVersion": "1.0.0.0"
+}

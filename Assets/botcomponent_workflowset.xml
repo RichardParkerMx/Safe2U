@@ -1,0 +1,29 @@
+<botcomponent_workflowset>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_013818ec6d8a42e5899996a6437cd7c1" workflowid.workflowid="943f42c5-5d5b-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_013818ec6d8a42e5899996a6437cd7c1" workflowid.workflowid="a1e19305-045b-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_8373eb4f55944d51b91bf9d752762438" workflowid.workflowid="09f72117-275c-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_8373eb4f55944d51b91bf9d752762438" workflowid.workflowid="73fb4973-195c-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_8373eb4f55944d51b91bf9d752762438" workflowid.workflowid="7cd31afa-145c-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_ebd4a7a9d0ce478e9d52e239f068c2d4" workflowid.workflowid="0b7352c2-1c5b-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart" workflowid.workflowid="19ebf8ca-1d5b-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_fd8d787bc95144e79fe515e87cc5d2e4" workflowid.workflowid="943f42c5-5d5b-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+  <botcomponent_workflow botcomponentid.schemaname="new_topic_fd8d787bc95144e79fe515e87cc5d2e4" workflowid.workflowid="a1e19305-045b-ee11-be6f-000d3a9958f3">
+    <iscustomizable>1</iscustomizable>
+  </botcomponent_workflow>
+</botcomponent_workflowset>

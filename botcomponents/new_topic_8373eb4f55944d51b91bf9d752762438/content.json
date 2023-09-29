@@ -1,0 +1,1003 @@
+{
+  "intents": [
+    {
+      "dialogId": "new_topic_8373eb4f55944d51b91bf9d752762438",
+      "isTriggeringEnabled": true,
+      "id": "new_topic_8373eb4f55944d51b91bf9d752762438",
+      "displayName": "2.0 Busqueda por Estado, Municipio y Localidad",
+      "createdTime": "2023-09-26T02:59:59.1197559Z",
+      "updatedTime": "2023-09-26T04:55:56.4061939Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "dialogs": [
+    {
+      "rootNodeId": "67c96282-c59d-4500-a5d7-03868f91cbd9",
+      "messageNodes": [
+        {
+          "botMessageId": "6ea113f5-0151-484c-a4c9-4884a5899d36",
+          "nodeType": "BotMessageNode",
+          "id": "55069c88-80b9-412b-b8ad-2d0deafea02a",
+          "defaultTargetNodeId": "67c96282-c59d-4500-a5d7-03868f91cbd9"
+        },
+        {
+          "botMessageId": "885a6468-a7e6-4ce0-8a34-1beee3c6be5e",
+          "nodeType": "BotMessageNode",
+          "id": "9ed32e21-0a60-4a66-a2fa-8e3dd52c8632",
+          "defaultTargetNodeId": "67c96282-c59d-4500-a5d7-03868f91cbd9"
+        },
+        {
+          "botMessageId": "07666106-1cc9-43cb-baa4-1512cc354f48",
+          "nodeType": "BotMessageNode",
+          "id": "9321b1b6-7079-455e-aa86-4c7f5f0543d4",
+          "defaultTargetNodeId": "dd22906b-fe70-4eba-8183-dc5fa03bc604"
+        },
+        {
+          "botMessageId": "bfb9529f-ed17-4a4f-bcbd-4ef8aa498c27",
+          "nodeType": "BotMessageNode",
+          "id": "fa2a3c88-4f8c-4522-8a27-778ec24578ec",
+          "defaultTargetNodeId": "058a7e17-066f-4bc9-8e49-48c6dcaaeebd"
+        },
+        {
+          "botMessageId": "9b5754be-2c1e-4b52-9b67-0c2e3dc052b8",
+          "nodeType": "BotMessageNode",
+          "id": "96c4448f-4399-46d1-86c5-d67018b62704",
+          "defaultTargetNodeId": "f5d27da5-b7b5-4d8e-8402-0ae52a4b6dc7"
+        },
+        {
+          "botMessageId": "a10d4c71-7866-4515-ab4b-e4e8b4a64edf",
+          "nodeType": "BotMessageNode",
+          "id": "083e0d11-3060-413e-ac8f-9c2d304677ad",
+          "defaultTargetNodeId": "058a7e17-066f-4bc9-8e49-48c6dcaaeebd"
+        },
+        {
+          "botMessageId": "138feee4-de29-4a72-a9f6-21b33a80b5d2",
+          "nodeType": "BotMessageNode",
+          "id": "ba7fc77d-011c-4ba5-8aad-33e1e8a71da2",
+          "defaultTargetNodeId": "ff9ed61b-cd3b-4798-a00c-ad4350c1a6a9"
+        },
+        {
+          "botMessageId": "c84ecfa8-bb3b-469b-a648-b1e2d0019bfd",
+          "nodeType": "BotMessageNode",
+          "id": "d5918f04-ae84-4377-bb93-27b515b8e15d",
+          "defaultTargetNodeId": "7245f026-d1a5-453d-9c88-6f766b2af3da"
+        },
+        {
+          "botMessageId": "01a7835a-35fb-4722-89bb-5968525302a8",
+          "nodeType": "BotMessageNode",
+          "id": "66d05f51-d7a6-4028-8d56-e335ce988f15",
+          "defaultTargetNodeId": "ee389138-702e-4272-b704-1fc941852973"
+        },
+        {
+          "botMessageId": "300b34c8-a151-4d34-a686-e8413777456e",
+          "nodeType": "BotMessageNode",
+          "id": "43c238c3-4890-42fa-82d0-657b2d181a85",
+          "defaultTargetNodeId": "ee389138-702e-4272-b704-1fc941852973"
+        },
+        {
+          "botMessageId": "1f3022e4-7e14-493f-b842-fea90bd9e703",
+          "nodeType": "BotMessageNode",
+          "id": "cef517ac-7070-48fc-8715-41ddd34f609a"
+        },
+        {
+          "botMessageId": "defb35ab-ddd7-406a-bb5d-08aa6ad30fae",
+          "nodeType": "BotMessageNode",
+          "id": "50f7fe77-3824-448b-b1c9-d67f3189ba35",
+          "defaultTargetNodeId": "fc34dabb-515b-4d6b-b867-0d15f4a07b8b"
+        }
+      ],
+      "actionNodes": [
+        {
+          "contextVariableId": "784ab992-6b68-4c26-9efa-96456c71f7ce",
+          "nodeType": "ActionNode",
+          "inputParameterVariableIdMap": {
+            "text": "{f74f6946-8ba7-41dc-8fee-c4d8e5eb5b09}"
+          },
+          "outputExpressionVariableIds": [
+            "7dabba0c-21e9-45b6-a009-bd5064b6c3d0",
+            "8c454ae0-8535-403c-979f-7380bb25340f",
+            "0a8be51d-2a8a-411f-8607-f28c98c6ad7a"
+          ],
+          "id": "1cabec46-5035-4ffb-bbd4-4f8e9341f600",
+          "routes": [
+            {
+              "expression": "@equals(parameters('8c454ae0-8535-403c-979f-7380bb25340f'), true)",
+              "targetNodeId": "058a7e17-066f-4bc9-8e49-48c6dcaaeebd"
+            }
+          ],
+          "defaultTargetNodeId": "55069c88-80b9-412b-b8ad-2d0deafea02a"
+        },
+        {
+          "contextVariableId": "de78eba0-a1a5-403f-9922-1d5e92103c11",
+          "nodeType": "ActionNode",
+          "inputParameterVariableIdMap": {
+            "text": "{7c089301-5d3b-4e4c-8389-1ef68f930fd7}",
+            "text_1": "{0a8be51d-2a8a-411f-8607-f28c98c6ad7a}"
+          },
+          "outputExpressionVariableIds": [
+            "4634afea-8e47-41ca-a6ae-b25186796c37",
+            "25c9db5e-3e51-47dd-9ca4-88b289b61f13",
+            "46988d2c-0f2a-4fab-87a0-3d3559673699"
+          ],
+          "id": "557bd3aa-5234-4c64-8072-fa1b65203ead",
+          "routes": [
+            {
+              "expression": "@equals(parameters('25c9db5e-3e51-47dd-9ca4-88b289b61f13'), true)",
+              "targetNodeId": "ff9ed61b-cd3b-4798-a00c-ad4350c1a6a9"
+            }
+          ],
+          "defaultTargetNodeId": "083e0d11-3060-413e-ac8f-9c2d304677ad"
+        },
+        {
+          "contextVariableId": "0d665473-6743-402f-9b18-068f9faf28d9",
+          "nodeType": "ActionNode",
+          "inputParameterVariableIdMap": {
+            "text": "{67343679-0f15-4589-a8b2-df3ee92cf827}",
+            "text_1": "{0a8be51d-2a8a-411f-8607-f28c98c6ad7a}",
+            "text_2": "{46988d2c-0f2a-4fab-87a0-3d3559673699}"
+          },
+          "outputExpressionVariableIds": [
+            "8c695f39-dca6-4a3a-af0f-35c147af98ad",
+            "new_variable_4903e92b289c48a29ac9d64d00a1fd1f_aa5b55414510417197b3dab87aa2d980"
+          ],
+          "id": "9c8e4443-2d88-4c0c-9cdf-3f94d199e449",
+          "routes": [
+            {
+              "expression": "@equals(parameters('8c695f39-dca6-4a3a-af0f-35c147af98ad'), true)",
+              "targetNodeId": "50f7fe77-3824-448b-b1c9-d67f3189ba35"
+            }
+          ],
+          "defaultTargetNodeId": "43c238c3-4890-42fa-82d0-657b2d181a85"
+        }
+      ],
+      "dialogChangeNodes": [
+        {
+          "targetDialogId": "new_topic_fd8d787bc95144e79fe515e87cc5d2e4",
+          "nodeType": "DialogChangeNode",
+          "id": "fc34dabb-515b-4d6b-b867-0d15f4a07b8b"
+        }
+      ],
+      "questionNodes": [
+        {
+          "contextVariableId": "f74f6946-8ba7-41dc-8fee-c4d8e5eb5b09",
+          "nodeType": "QuestionNode",
+          "id": "67c96282-c59d-4500-a5d7-03868f91cbd9",
+          "defaultTargetNodeId": "dd22906b-fe70-4eba-8183-dc5fa03bc604"
+        },
+        {
+          "contextVariableId": "7c089301-5d3b-4e4c-8389-1ef68f930fd7",
+          "nodeType": "QuestionNode",
+          "id": "058a7e17-066f-4bc9-8e49-48c6dcaaeebd",
+          "defaultTargetNodeId": "f5d27da5-b7b5-4d8e-8402-0ae52a4b6dc7"
+        },
+        {
+          "contextVariableId": "023f3853-270e-4dbc-b608-d5bd3a460bf1",
+          "nodeType": "QuestionNode",
+          "id": "dd22906b-fe70-4eba-8183-dc5fa03bc604",
+          "routes": [
+            {
+              "expression": "@equals(parameters('023f3853-270e-4dbc-b608-d5bd3a460bf1'), '1b60897e-5e5d-4e69-a4df-31f7c1864f50')",
+              "targetNodeId": "1cabec46-5035-4ffb-bbd4-4f8e9341f600"
+            },
+            {
+              "expression": "@equals(parameters('023f3853-270e-4dbc-b608-d5bd3a460bf1'), '99b3f906-063e-4005-90d2-7a13a346d335')",
+              "targetNodeId": "9ed32e21-0a60-4a66-a2fa-8e3dd52c8632"
+            }
+          ],
+          "defaultTargetNodeId": "9321b1b6-7079-455e-aa86-4c7f5f0543d4"
+        },
+        {
+          "contextVariableId": "3723729b-e3f2-4508-abf2-0f35ea3d7025",
+          "nodeType": "QuestionNode",
+          "id": "f5d27da5-b7b5-4d8e-8402-0ae52a4b6dc7",
+          "routes": [
+            {
+              "expression": "@equals(parameters('3723729b-e3f2-4508-abf2-0f35ea3d7025'), '1b60897e-5e5d-4e69-a4df-31f7c1864f50')",
+              "targetNodeId": "557bd3aa-5234-4c64-8072-fa1b65203ead"
+            },
+            {
+              "expression": "@equals(parameters('3723729b-e3f2-4508-abf2-0f35ea3d7025'), '99b3f906-063e-4005-90d2-7a13a346d335')",
+              "targetNodeId": "fa2a3c88-4f8c-4522-8a27-778ec24578ec"
+            }
+          ],
+          "defaultTargetNodeId": "96c4448f-4399-46d1-86c5-d67018b62704"
+        },
+        {
+          "contextVariableId": "67343679-0f15-4589-a8b2-df3ee92cf827",
+          "nodeType": "QuestionNode",
+          "id": "ff9ed61b-cd3b-4798-a00c-ad4350c1a6a9",
+          "defaultTargetNodeId": "7245f026-d1a5-453d-9c88-6f766b2af3da"
+        },
+        {
+          "contextVariableId": "083b8e15-d2b6-4217-9bd8-a7ebb71aef96",
+          "nodeType": "QuestionNode",
+          "id": "7245f026-d1a5-453d-9c88-6f766b2af3da",
+          "routes": [
+            {
+              "expression": "@equals(parameters('083b8e15-d2b6-4217-9bd8-a7ebb71aef96'), '1b60897e-5e5d-4e69-a4df-31f7c1864f50')",
+              "targetNodeId": "9c8e4443-2d88-4c0c-9cdf-3f94d199e449"
+            },
+            {
+              "expression": "@equals(parameters('083b8e15-d2b6-4217-9bd8-a7ebb71aef96'), '99b3f906-063e-4005-90d2-7a13a346d335')",
+              "targetNodeId": "ba7fc77d-011c-4ba5-8aad-33e1e8a71da2"
+            }
+          ],
+          "defaultTargetNodeId": "d5918f04-ae84-4377-bb93-27b515b8e15d"
+        },
+        {
+          "contextVariableId": "40f86fec-0e5d-4b35-b64e-f234d7d49110",
+          "nodeType": "QuestionNode",
+          "id": "ee389138-702e-4272-b704-1fc941852973",
+          "routes": [
+            {
+              "expression": "@equals(parameters('40f86fec-0e5d-4b35-b64e-f234d7d49110'), '1b60897e-5e5d-4e69-a4df-31f7c1864f50')",
+              "targetNodeId": "ff9ed61b-cd3b-4798-a00c-ad4350c1a6a9"
+            },
+            {
+              "expression": "@equals(parameters('40f86fec-0e5d-4b35-b64e-f234d7d49110'), '99b3f906-063e-4005-90d2-7a13a346d335')",
+              "targetNodeId": "cef517ac-7070-48fc-8715-41ddd34f609a"
+            }
+          ],
+          "defaultTargetNodeId": "66d05f51-d7a6-4028-8d56-e335ce988f15"
+        }
+      ],
+      "id": "new_topic_8373eb4f55944d51b91bf9d752762438",
+      "displayName": "Untitled",
+      "createdTime": "2023-09-26T02:59:59.1197551Z",
+      "updatedTime": "2023-09-26T04:55:56.4061931Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "botMessages": [
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "¿En que estado te encuentras?"
+        }
+      },
+      "id": "c37d11cc-89c8-4be2-a272-70d481101f7d",
+      "createdTime": "2023-09-26T02:11:16.935Z",
+      "updatedTime": "2023-09-26T02:11:16.935Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "¿En cual de los siguientes municipios te encuentras?\n\n{7dabba0c-21e9-45b6-a009-bd5064b6c3d0}"
+        }
+      },
+      "id": "0c4aa9ee-a2ba-42e6-bb94-41f9abc91b35",
+      "createdTime": "2023-09-26T02:57:23.377Z",
+      "updatedTime": "2023-09-26T02:57:23.377Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Confirmas haber dicho que estas en el estado de {f74f6946-8ba7-41dc-8fee-c4d8e5eb5b09}."
+        }
+      },
+      "id": "a78cf8cc-763c-44f9-9143-3ad978ac618c",
+      "createdTime": "2023-09-26T03:11:46.024Z",
+      "updatedTime": "2023-09-26T03:11:46.024Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Confirmas haber dicho que estas en el municipio de {7c089301-5d3b-4e4c-8389-1ef68f930fd7}"
+        }
+      },
+      "id": "92a4557a-fd52-4fac-9f78-ccf967b639db",
+      "createdTime": "2023-09-26T03:24:39.594Z",
+      "updatedTime": "2023-09-26T03:24:39.594Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Puedes decirme en que localidad de las siguientes te encuentras.\n\n{4634afea-8e47-41ca-a6ae-b25186796c37}"
+        }
+      },
+      "id": "4926a39e-0072-42bc-bb58-cec0f7fb4298",
+      "createdTime": "2023-09-26T04:15:56.643Z",
+      "updatedTime": "2023-09-26T04:15:56.643Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Puedes confirmarme que dijiste que te encuentras en la localidad de {67343679-0f15-4589-a8b2-df3ee92cf827}"
+        }
+      },
+      "id": "6c8564d1-31a9-4847-8a6d-e4b998e01408",
+      "createdTime": "2023-09-26T04:17:26.047Z",
+      "updatedTime": "2023-09-26T04:17:26.047Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "¿Quieres intentar con otra localidad?"
+        }
+      },
+      "id": "c87a97b0-25f0-4bff-a6b5-9bc23fd1e602",
+      "createdTime": "2023-09-26T04:44:35.368Z",
+      "updatedTime": "2023-09-26T04:44:35.368Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Lo siento no encontre ningun municipio en ese estado puedes intentar con otro, por favor dime"
+        }
+      },
+      "id": "6ea113f5-0151-484c-a4c9-4884a5899d36",
+      "createdTime": "2023-09-26T02:58:17.231Z",
+      "updatedTime": "2023-09-26T02:58:17.231Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Vale, entonces por favor repiteme"
+        }
+      },
+      "id": "885a6468-a7e6-4ce0-8a34-1beee3c6be5e",
+      "createdTime": "2023-09-26T03:13:15.134Z",
+      "updatedTime": "2023-09-26T03:13:15.134Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "No entendi lo que me contestaste puedes porfavor"
+        }
+      },
+      "id": "07666106-1cc9-43cb-baa4-1512cc354f48",
+      "createdTime": "2023-09-26T03:14:06.331Z",
+      "updatedTime": "2023-09-26T03:14:06.331Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Vale, entonces por favor repiteme"
+        }
+      },
+      "id": "bfb9529f-ed17-4a4f-bcbd-4ef8aa498c27",
+      "createdTime": "2023-09-26T03:26:13.225Z",
+      "updatedTime": "2023-09-26T03:26:13.225Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "No entendi lo que me contestaste puedes porfavor repetirme si"
+        }
+      },
+      "id": "9b5754be-2c1e-4b52-9b67-0c2e3dc052b8",
+      "createdTime": "2023-09-26T03:26:47.707Z",
+      "updatedTime": "2023-09-26T03:26:47.707Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Losiento no encontre ninguna localidad en ese municipio, puedes intentar con otro, porfavor dime"
+        }
+      },
+      "id": "a10d4c71-7866-4515-ab4b-e4e8b4a64edf",
+      "createdTime": "2023-09-26T04:13:43.687Z",
+      "updatedTime": "2023-09-26T04:13:43.687Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Vale, entonces por favor"
+        }
+      },
+      "id": "138feee4-de29-4a72-a9f6-21b33a80b5d2",
+      "createdTime": "2023-09-26T04:19:04.206Z",
+      "updatedTime": "2023-09-26T04:19:04.206Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "No entendi lo que me contestaste porfavor"
+        }
+      },
+      "id": "c84ecfa8-bb3b-469b-a648-b1e2d0019bfd",
+      "createdTime": "2023-09-26T04:20:09.186Z",
+      "updatedTime": "2023-09-26T04:20:09.186Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Perdon no entendi lo que dijiste, dime si"
+        }
+      },
+      "id": "01a7835a-35fb-4722-89bb-5968525302a8",
+      "createdTime": "2023-09-26T04:46:17.725Z",
+      "updatedTime": "2023-09-26T04:46:17.725Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "No encontre ningun hospital con esa localidad"
+        }
+      },
+      "id": "300b34c8-a151-4d34-a686-e8413777456e",
+      "createdTime": "2023-09-26T04:47:26.994Z",
+      "updatedTime": "2023-09-26T04:47:26.994Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Gracias por usar nuestros servicios, espero hayan sido de utilidad.\n\nHasta luego"
+        }
+      },
+      "id": "1f3022e4-7e14-493f-b842-fea90bd9e703",
+      "createdTime": "2023-09-26T04:48:21.467Z",
+      "updatedTime": "2023-09-26T04:48:21.467Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Encontre los siguientes hospitales cerca de ti\n\n{new\\_variable\\_4903e92b289c48a29ac9d64d00a1fd1f\\_aa5b55414510417197b3dab87aa2d980}"
+        }
+      },
+      "id": "defb35ab-ddd7-406a-bb5d-08aa6ad30fae",
+      "createdTime": "2023-09-26T04:55:47.471Z",
+      "updatedTime": "2023-09-26T04:55:47.471Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    }
+  ],
+  "actionDefinitions": [
+    {
+      "timeoutInSeconds": 60,
+      "retryCount": 1,
+      "method": 2,
+      "headers": {
+        "accept": "application/json"
+      },
+      "bodyContent": "{\"text\":\"{f74f6946-8ba7-41dc-8fee-c4d8e5eb5b09}\"}",
+      "actionType": "Flow",
+      "flowMetadata": {
+        "id": "7cd31afa-145c-ee11-be6f-000d3a9958f3",
+        "title": "Obtiene municipios",
+        "description": "Call this flow from Power Virtual Agents.",
+        "httpMethod": 2,
+        "inputParameters": [
+          {
+            "name": "Estado",
+            "id": "text",
+            "type": "String",
+            "optional": false
+          }
+        ],
+        "outputParameters": [
+          {
+            "name": "Municipios",
+            "id": "municipios",
+            "type": "String",
+            "optional": true
+          },
+          {
+            "name": "Bool_Municipios",
+            "id": "bool_municipios",
+            "type": "Boolean",
+            "optional": true
+          },
+          {
+            "name": "Estado_Confirmado",
+            "id": "estado_confirmado",
+            "type": "String",
+            "optional": true
+          }
+        ],
+        "outputSchemaType": "Json",
+        "createdTime": "2023-09-26T02:32:53Z",
+        "isEnabled": true,
+        "lastModifiedTime": "2023-09-26T02:55:32Z",
+        "versionNumber": 5486120
+      },
+      "id": "5b471040-a614-4693-a8b8-877c20424b2d",
+      "displayName": "Obtiene municipios",
+      "description": "Call this flow from Power Virtual Agents.",
+      "createdTime": "2023-09-26T02:57:04.278Z",
+      "updatedTime": "2023-09-26T02:57:04.278Z"
+    },
+    {
+      "timeoutInSeconds": 60,
+      "retryCount": 1,
+      "method": 2,
+      "headers": {
+        "accept": "application/json"
+      },
+      "bodyContent": "{\"text\":\"{7c089301-5d3b-4e4c-8389-1ef68f930fd7}\",\"text_1\":\"{0a8be51d-2a8a-411f-8607-f28c98c6ad7a}\"}",
+      "actionType": "Flow",
+      "flowMetadata": {
+        "id": "73fb4973-195c-ee11-be6f-000d3a9958f3",
+        "title": "Obtiene localidades",
+        "description": "Call this flow from Power Virtual Agents.",
+        "httpMethod": 2,
+        "inputParameters": [
+          {
+            "name": "Municipio_Seleccionado",
+            "id": "text",
+            "type": "String",
+            "optional": false
+          },
+          {
+            "name": "Estado_Confirmado",
+            "id": "text_1",
+            "type": "String",
+            "optional": false
+          }
+        ],
+        "outputParameters": [
+          {
+            "name": "Localidades",
+            "id": "localidades",
+            "type": "String",
+            "optional": true
+          },
+          {
+            "name": "Bool_Localidades",
+            "id": "bool_localidades",
+            "type": "Boolean",
+            "optional": true
+          },
+          {
+            "name": "Municipio:Confirmado",
+            "id": "municipio:confirmado",
+            "type": "String",
+            "optional": true
+          }
+        ],
+        "outputSchemaType": "Json",
+        "createdTime": "2023-09-26T03:04:48Z",
+        "isEnabled": true,
+        "lastModifiedTime": "2023-09-26T03:04:53Z",
+        "versionNumber": 5486454
+      },
+      "id": "f148eef0-2f88-4fd9-b222-8b6967a19273",
+      "displayName": "Obtiene localidades",
+      "description": "Call this flow from Power Virtual Agents.",
+      "createdTime": "2023-09-26T03:05:13.645Z",
+      "updatedTime": "2023-09-26T03:05:13.645Z"
+    },
+    {
+      "timeoutInSeconds": 60,
+      "retryCount": 1,
+      "method": 2,
+      "headers": {
+        "accept": "application/json"
+      },
+      "bodyContent": "{\"text\":\"{67343679-0f15-4589-a8b2-df3ee92cf827}\",\"text_1\":\"{0a8be51d-2a8a-411f-8607-f28c98c6ad7a}\",\"text_2\":\"{46988d2c-0f2a-4fab-87a0-3d3559673699}\"}",
+      "actionType": "Flow",
+      "flowMetadata": {
+        "id": "09f72117-275c-ee11-be6f-000d3a9958f3",
+        "title": "Obtiene hospitales por estado",
+        "description": "Call this flow from Power Virtual Agents.",
+        "httpMethod": 2,
+        "inputParameters": [
+          {
+            "name": "Localidad_Seleccionado",
+            "id": "text",
+            "type": "String",
+            "optional": false
+          },
+          {
+            "name": "Estado_Confirmado",
+            "id": "text_1",
+            "type": "String",
+            "optional": false
+          },
+          {
+            "name": "Municipio_COnfirmado",
+            "id": "text_2",
+            "type": "String",
+            "optional": false
+          }
+        ],
+        "outputParameters": [
+          {
+            "name": "Hospitales_Estado",
+            "id": "hospitales_estado",
+            "type": "String",
+            "optional": true
+          },
+          {
+            "name": "Bool_Hospitales",
+            "id": "bool_hospitales",
+            "type": "Boolean",
+            "optional": true
+          }
+        ],
+        "outputSchemaType": "Json",
+        "createdTime": "2023-09-26T04:42:26Z",
+        "isEnabled": true,
+        "lastModifiedTime": "2023-09-26T04:42:47Z",
+        "versionNumber": 5487485
+      },
+      "id": "c972be8d-8c54-4314-8d97-002e122762bf",
+      "displayName": "Obtiene hospitales por estado",
+      "description": "Call this flow from Power Virtual Agents.",
+      "createdTime": "2023-09-26T04:43:11.655Z",
+      "updatedTime": "2023-09-26T04:43:11.655Z"
+    }
+  ],
+  "contextVariables": [
+    {
+      "systemType": "None",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "c37d11cc-89c8-4be2-a272-70d481101f7d"
+        ]
+      },
+      "isGlobal": false,
+      "id": "f74f6946-8ba7-41dc-8fee-c4d8e5eb5b09",
+      "displayName": "Estado",
+      "createdTime": "2023-09-26T02:59:59.1197566Z",
+      "updatedTime": "2023-09-26T04:55:56.4061943Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "None",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "0c4aa9ee-a2ba-42e6-bb94-41f9abc91b35"
+        ]
+      },
+      "isGlobal": false,
+      "id": "7c089301-5d3b-4e4c-8389-1ef68f930fd7",
+      "displayName": "Municipio_Seleccionado",
+      "createdTime": "2023-09-26T02:59:59.1197568Z",
+      "updatedTime": "2023-09-26T04:55:56.4061945Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "new_customtype_97d7fc34029c40bbad79603e4ffcd4d7",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "a78cf8cc-763c-44f9-9143-3ad978ac618c"
+        ]
+      },
+      "isGlobal": false,
+      "id": "023f3853-270e-4dbc-b608-d5bd3a460bf1",
+      "displayName": "Confirmacion_Estado",
+      "createdTime": "2023-09-26T03:11:46.024Z",
+      "updatedTime": "2023-09-26T04:55:56.4061947Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "new_customtype_97d7fc34029c40bbad79603e4ffcd4d7",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "92a4557a-fd52-4fac-9f78-ccf967b639db"
+        ]
+      },
+      "isGlobal": false,
+      "id": "3723729b-e3f2-4508-abf2-0f35ea3d7025",
+      "displayName": "Confirmacion_Municipio",
+      "createdTime": "2023-09-26T03:24:39.594Z",
+      "updatedTime": "2023-09-26T04:55:56.4061949Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "None",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "4926a39e-0072-42bc-bb58-cec0f7fb4298"
+        ]
+      },
+      "isGlobal": false,
+      "id": "67343679-0f15-4589-a8b2-df3ee92cf827",
+      "displayName": "Localidad_Seleccionada",
+      "createdTime": "2023-09-26T04:15:56.643Z",
+      "updatedTime": "2023-09-26T04:55:56.4061951Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "new_customtype_97d7fc34029c40bbad79603e4ffcd4d7",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "6c8564d1-31a9-4847-8a6d-e4b998e01408"
+        ]
+      },
+      "isGlobal": false,
+      "id": "083b8e15-d2b6-4217-9bd8-a7ebb71aef96",
+      "displayName": "Confirmacion_Localidad",
+      "createdTime": "2023-09-26T04:17:26.047Z",
+      "updatedTime": "2023-09-26T04:55:56.4061953Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "new_customtype_97d7fc34029c40bbad79603e4ffcd4d7",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "c87a97b0-25f0-4bff-a6b5-9bc23fd1e602"
+        ]
+      },
+      "isGlobal": false,
+      "id": "40f86fec-0e5d-4b35-b64e-f234d7d49110",
+      "displayName": "Intentar_Otra_Vez",
+      "createdTime": "2023-09-26T04:44:35.368Z",
+      "updatedTime": "2023-09-26T04:55:56.4061954Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "bdc57322-56da-47d0-82c9-7a071aaa7cfd",
+      "initializerType": "Action",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "actionId": "5b471040-a614-4693-a8b8-877c20424b2d",
+      "isGlobal": false,
+      "id": "784ab992-6b68-4c26-9efa-96456c71f7ce",
+      "displayName": "",
+      "createdTime": "2023-09-26T02:59:59.119757Z",
+      "updatedTime": "2023-09-26T04:55:56.4061956Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "String",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('784ab992-6b68-4c26-9efa-96456c71f7ce')['municipios']",
+      "isGlobal": false,
+      "id": "7dabba0c-21e9-45b6-a009-bd5064b6c3d0",
+      "displayName": "Municipios",
+      "createdTime": "2023-09-26T02:59:59.1197572Z",
+      "updatedTime": "2023-09-26T04:55:56.4061956Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "Boolean",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('784ab992-6b68-4c26-9efa-96456c71f7ce')['bool_municipios']",
+      "isGlobal": false,
+      "id": "8c454ae0-8535-403c-979f-7380bb25340f",
+      "displayName": "Bool_Municipios",
+      "createdTime": "2023-09-26T02:59:59.1197574Z",
+      "updatedTime": "2023-09-26T04:55:56.4061958Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "String",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('784ab992-6b68-4c26-9efa-96456c71f7ce')['estado_confirmado']",
+      "isGlobal": false,
+      "id": "0a8be51d-2a8a-411f-8607-f28c98c6ad7a",
+      "displayName": "Estado_Confirmado",
+      "createdTime": "2023-09-26T03:19:06.89Z",
+      "updatedTime": "2023-09-26T04:55:56.4061959Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "a0c4aec8-8161-4d10-928b-f0863a5c0705",
+      "initializerType": "Action",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "actionId": "f148eef0-2f88-4fd9-b222-8b6967a19273",
+      "isGlobal": false,
+      "id": "de78eba0-a1a5-403f-9922-1d5e92103c11",
+      "displayName": "",
+      "createdTime": "2023-09-26T03:05:13.645Z",
+      "updatedTime": "2023-09-26T04:55:56.4061961Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "String",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('de78eba0-a1a5-403f-9922-1d5e92103c11')['localidades']",
+      "isGlobal": false,
+      "id": "4634afea-8e47-41ca-a6ae-b25186796c37",
+      "displayName": "Localidades",
+      "createdTime": "2023-09-26T03:41:20.441Z",
+      "updatedTime": "2023-09-26T04:55:56.4061962Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "Boolean",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('de78eba0-a1a5-403f-9922-1d5e92103c11')['bool_localidades']",
+      "isGlobal": false,
+      "id": "25c9db5e-3e51-47dd-9ca4-88b289b61f13",
+      "displayName": "Bool_Localidades",
+      "createdTime": "2023-09-26T03:41:20.441Z",
+      "updatedTime": "2023-09-26T04:55:56.4061964Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "String",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('de78eba0-a1a5-403f-9922-1d5e92103c11')['municipio:confirmado']",
+      "isGlobal": false,
+      "id": "46988d2c-0f2a-4fab-87a0-3d3559673699",
+      "displayName": "MunicipioConfirmado",
+      "createdTime": "2023-09-26T03:41:20.441Z",
+      "updatedTime": "2023-09-26T04:55:56.4061966Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "7a740e78-95c1-4259-bb62-4e839bdc9dbc",
+      "initializerType": "Action",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "actionId": "c972be8d-8c54-4314-8d97-002e122762bf",
+      "isGlobal": false,
+      "id": "0d665473-6743-402f-9b18-068f9faf28d9",
+      "displayName": "",
+      "createdTime": "2023-09-26T04:43:11.655Z",
+      "updatedTime": "2023-09-26T04:55:56.4061967Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "Boolean",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('0d665473-6743-402f-9b18-068f9faf28d9')['bool_hospitales']",
+      "isGlobal": false,
+      "id": "8c695f39-dca6-4a3a-af0f-35c147af98ad",
+      "displayName": "Bool_Hospitales",
+      "createdTime": "2023-09-26T04:43:11.656Z",
+      "updatedTime": "2023-09-26T04:55:56.4061969Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "jsonTypes": [
+    {
+      "customTypeSchema": "Json",
+      "id": "bdc57322-56da-47d0-82c9-7a071aaa7cfd",
+      "displayName": "Response Json Type for Flow - Obtiene municipios",
+      "createdTime": "2023-09-26T02:57:04.278Z",
+      "updatedTime": "2023-09-26T02:57:04.278Z"
+    },
+    {
+      "customTypeSchema": "Json",
+      "id": "a0c4aec8-8161-4d10-928b-f0863a5c0705",
+      "displayName": "Response Json Type for Flow - Obtiene localidades",
+      "createdTime": "2023-09-26T03:05:13.645Z",
+      "updatedTime": "2023-09-26T03:05:13.645Z"
+    },
+    {
+      "customTypeSchema": "Json",
+      "id": "7a740e78-95c1-4259-bb62-4e839bdc9dbc",
+      "displayName": "Response Json Type for Flow - Obtiene hospitales por estado",
+      "createdTime": "2023-09-26T04:43:11.655Z",
+      "updatedTime": "2023-09-26T04:43:11.655Z"
+    }
+  ]
+}

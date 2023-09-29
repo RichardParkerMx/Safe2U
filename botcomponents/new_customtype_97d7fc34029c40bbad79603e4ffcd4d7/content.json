@@ -1,0 +1,49 @@
+{
+  "namedEntities": [
+    {
+      "synonyms": [
+        "simon.",
+        "acepto.",
+        "adelante.",
+        "ok.",
+        "Si."
+      ],
+      "id": "1b60897e-5e5d-4e69-a4df-31f7c1864f50",
+      "displayName": "Si",
+      "createdTime": "2023-09-26T03:11:18.0743953Z",
+      "updatedTime": "2023-09-26T04:51:53.4592453Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "synonyms": [
+        "cancelar.",
+        "nel.",
+        "No."
+      ],
+      "id": "99b3f906-063e-4005-90d2-7a13a346d335",
+      "displayName": "No",
+      "createdTime": "2023-09-26T03:11:18.0743953Z",
+      "updatedTime": "2023-09-26T04:51:53.4592453Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "closedListTypes": [
+    {
+      "namedEntities": [
+        "1b60897e-5e5d-4e69-a4df-31f7c1864f50",
+        "99b3f906-063e-4005-90d2-7a13a346d335"
+      ],
+      "smartMatchingEnabled": true,
+      "customTypeSchema": "ClosedList",
+      "id": "new_customtype_97d7fc34029c40bbad79603e4ffcd4d7",
+      "displayName": "Opcciones si o no",
+      "description": "",
+      "createdTime": "2023-09-26T03:11:18.0743953Z",
+      "updatedTime": "2023-09-26T04:51:53.4592453Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ]
+}

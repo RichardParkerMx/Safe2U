@@ -1,0 +1,51 @@
+{
+  "namedEntities": [
+    {
+      "synonyms": [
+        "Si.",
+        "Si",
+        "Uno",
+        "Uno.",
+        "1."
+      ],
+      "id": "e3431c30-323f-4017-8750-8933c5f03d34",
+      "displayName": "1",
+      "createdTime": "2023-09-25T04:23:17.8198656Z",
+      "updatedTime": "2023-09-25T04:23:17.8198656Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "synonyms": [
+        "No.",
+        "No",
+        "2.",
+        "Dos",
+        "Dos."
+      ],
+      "id": "e60eea2b-0f14-4d92-8dde-3aaa3ce595cb",
+      "displayName": "2",
+      "createdTime": "2023-09-25T04:23:17.8198656Z",
+      "updatedTime": "2023-09-25T04:23:17.8198656Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "closedListTypes": [
+    {
+      "namedEntities": [
+        "e3431c30-323f-4017-8750-8933c5f03d34",
+        "e60eea2b-0f14-4d92-8dde-3aaa3ce595cb"
+      ],
+      "smartMatchingEnabled": true,
+      "customTypeSchema": "ClosedList",
+      "id": "new_customtype_7a171b82053f4364a78e6557ccb7131d",
+      "displayName": "Opciones envio de SMS",
+      "description": "",
+      "createdTime": "2023-09-25T04:23:17.8198656Z",
+      "updatedTime": "2023-09-25T04:23:17.8198656Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ]
+}

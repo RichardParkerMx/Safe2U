@@ -1,0 +1,212 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_twilio": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedtwilio_81535"
+        },
+        "api": {
+          "name": "shared_twilio"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "cc4506a8-c8f1-4930-b67d-262a56b66d8b"
+          },
+          "type": "Request",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Numero",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_1": {
+                  "title": "Hospitales",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text",
+                "text_1"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Try": {
+          "actions": {
+            "Send_Text_Message_(SMS)": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f5224ad0-c767-4481-98a8-819e2225249f"
+              },
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "shared_twilio",
+                  "operationId": "SendMessage",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_twilio"
+                },
+                "parameters": {
+                  "sendMessageRequest/from": "+13344215299",
+                  "sendMessageRequest/to": "+@{triggerBody()['text']}",
+                  "sendMessageRequest/body": "Los hospitales cerca de ti son:\n@{triggerBody()['text_1']}\nGracias por usar nuestros servicios | CareUp 🤖"
+                },
+                "authentication": "@parameters('$authentication')"
+              }
+            },
+            "Set_variable": {
+              "runAfter": {
+                "Send_Text_Message_(SMS)": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "bb4dabd1-c99d-4779-97f9-1ae013dcc031"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Envio_SMS_Exitoso",
+                "value": "@true"
+              }
+            },
+            "Return_value(s)_to_Power_Virtual_Agents": {
+              "runAfter": {
+                "Set_variable": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5f8e1355-3994-4388-8ff7-6f007e9483ad"
+              },
+              "type": "Response",
+              "kind": "VirtualAgent",
+              "inputs": {
+                "statusCode": 200,
+                "body": {
+                  "bool_envio": "@{variables('Envio_SMS_Exitoso')}"
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "bool_envio": {
+                      "title": "Bool_Envio",
+                      "x-ms-dynamically-added": true,
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Envio_SMS_Exitoso": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4fc22feb-369f-4c94-96b0-0018aed11154"
+          },
+          "type": "Scope"
+        },
+        "Catch": {
+          "actions": {
+            "Set_variable_2": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "f1b1efeb-5501-49cf-b32b-3dddcebae500"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Envio_SMS_Exitoso",
+                "value": "@false"
+              }
+            },
+            "Return_value(s)_to_Power_Virtual_Agents_2": {
+              "runAfter": {
+                "Set_variable_2": [
+                  "Succeeded"
+                ]
+              },
+              "metadata": {
+                "operationMetadataId": "5f8e1355-3994-4388-8ff7-6f007e9483ad"
+              },
+              "type": "Response",
+              "kind": "VirtualAgent",
+              "inputs": {
+                "statusCode": 200,
+                "body": {
+                  "bool_envio": "@{variables('Envio_SMS_Exitoso')}"
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "bool_envio": {
+                      "title": "Bool_Envio",
+                      "x-ms-dynamically-added": true,
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "Try": [
+              "Failed",
+              "TimedOut"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "9b7059ff-9d5e-415b-8785-8dea362f27d4"
+          },
+          "type": "Scope"
+        },
+        "Envio_SMS_Exitoso": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "cc1b0167-d86a-4ef2-a440-6c3faf591043"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Envio_SMS_Exitoso",
+                "type": "boolean"
+              }
+            ]
+          }
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "c9cd2c4e691a4646adc8aa592c88489b"
+  },
+  "schemaVersion": "1.0.0.0"
+}

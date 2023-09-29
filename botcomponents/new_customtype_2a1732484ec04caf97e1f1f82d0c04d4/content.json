@@ -1,0 +1,52 @@
+{
+  "namedEntities": [
+    {
+      "synonyms": [
+        "1.",
+        "Código Postal",
+        "Código Postal.",
+        "Uno.",
+        "Uno"
+      ],
+      "id": "99b05348-ec56-4df2-91e6-79d5710bf086",
+      "displayName": "1",
+      "createdTime": "2023-09-24T21:14:42.4743302Z",
+      "updatedTime": "2023-09-24T21:14:42.4743302Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "synonyms": [
+        "2.",
+        "Localidad",
+        "Municipio",
+        "Estado",
+        "dos.",
+        "dos"
+      ],
+      "id": "7a836353-6f17-4f25-9905-ea81f05b2259",
+      "displayName": "2",
+      "createdTime": "2023-09-24T21:14:42.4743302Z",
+      "updatedTime": "2023-09-24T21:14:42.4743302Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "closedListTypes": [
+    {
+      "namedEntities": [
+        "99b05348-ec56-4df2-91e6-79d5710bf086",
+        "7a836353-6f17-4f25-9905-ea81f05b2259"
+      ],
+      "smartMatchingEnabled": true,
+      "customTypeSchema": "ClosedList",
+      "id": "new_customtype_2a1732484ec04caf97e1f1f82d0c04d4",
+      "displayName": "Opciones menu",
+      "description": "",
+      "createdTime": "2023-09-24T21:14:42.4743302Z",
+      "updatedTime": "2023-09-24T21:14:42.4743302Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ]
+}

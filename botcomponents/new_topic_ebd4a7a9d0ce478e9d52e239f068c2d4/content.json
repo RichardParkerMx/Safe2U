@@ -1,0 +1,229 @@
+{
+  "intents": [
+    {
+      "dialogId": "new_topic_ebd4a7a9d0ce478e9d52e239f068c2d4",
+      "isTriggeringEnabled": true,
+      "id": "new_topic_ebd4a7a9d0ce478e9d52e239f068c2d4",
+      "displayName": "1.0 Busqueda por CP",
+      "createdTime": "2023-09-25T04:29:30.655194Z",
+      "updatedTime": "2023-09-25T06:00:11.4907625Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "dialogs": [
+    {
+      "rootNodeId": "8b4543aa-605e-4d56-ba9c-e28bec1263dc",
+      "messageNodes": [
+        {
+          "botMessageId": "2da7e62f-e96f-401b-b3cc-8dd4fb0e32f6",
+          "nodeType": "BotMessageNode",
+          "id": "83020022-cbd7-46ec-9b8c-086ff4e6eb35",
+          "defaultTargetNodeId": "ff288475-738e-4276-be5a-dc5239109302"
+        },
+        {
+          "botMessageId": "beccb115-cb2e-4def-9288-87b43c41954d",
+          "nodeType": "BotMessageNode",
+          "id": "159cc011-cea5-4f79-837d-df99e557af55",
+          "defaultTargetNodeId": "8b4543aa-605e-4d56-ba9c-e28bec1263dc"
+        }
+      ],
+      "actionNodes": [
+        {
+          "contextVariableId": "b2aa8e50-fe10-49e8-ae32-c525649a18cb",
+          "nodeType": "ActionNode",
+          "inputParameterVariableIdMap": {
+            "text": "{3383a6f0-fd17-43ef-9a2c-8afd4b201c8a}"
+          },
+          "outputExpressionVariableIds": [
+            "dc32b737-276e-42f2-a603-d3d7f04ba46a",
+            "new_variable_4903e92b289c48a29ac9d64d00a1fd1f_75f6e1df43324ca4bda89bb9e7fe2134"
+          ],
+          "id": "2d4744ec-d6bb-46fe-b80a-ee16c7024382",
+          "routes": [
+            {
+              "expression": "@equals(parameters('dc32b737-276e-42f2-a603-d3d7f04ba46a'), true)",
+              "targetNodeId": "83020022-cbd7-46ec-9b8c-086ff4e6eb35"
+            }
+          ],
+          "defaultTargetNodeId": "159cc011-cea5-4f79-837d-df99e557af55"
+        }
+      ],
+      "dialogChangeNodes": [
+        {
+          "targetDialogId": "new_topic_013818ec6d8a42e5899996a6437cd7c1",
+          "nodeType": "DialogChangeNode",
+          "id": "ff288475-738e-4276-be5a-dc5239109302"
+        }
+      ],
+      "questionNodes": [
+        {
+          "contextVariableId": "3383a6f0-fd17-43ef-9a2c-8afd4b201c8a",
+          "nodeType": "QuestionNode",
+          "id": "8b4543aa-605e-4d56-ba9c-e28bec1263dc",
+          "defaultTargetNodeId": "2d4744ec-d6bb-46fe-b80a-ee16c7024382"
+        }
+      ],
+      "id": "new_topic_ebd4a7a9d0ce478e9d52e239f068c2d4",
+      "displayName": "Untitled",
+      "createdTime": "2023-09-25T04:29:30.655193Z",
+      "updatedTime": "2023-09-25T06:00:11.4907618Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "botMessages": [
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Porfavor indicame cual es tu codigo postal"
+        }
+      },
+      "id": "acc986e7-f84b-4e32-a047-72a87d036e7d",
+      "createdTime": "2023-09-25T04:25:11.905Z",
+      "updatedTime": "2023-09-25T04:25:11.905Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Encontre los siguientes hospitales cerca de ti\n\n{new\\_variable\\_4903e92b289c48a29ac9d64d00a1fd1f\\_75f6e1df43324ca4bda89bb9e7fe2134}"
+        }
+      },
+      "id": "2da7e62f-e96f-401b-b3cc-8dd4fb0e32f6",
+      "createdTime": "2023-09-25T04:26:41.365Z",
+      "updatedTime": "2023-09-25T04:26:41.365Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "No comprendi muy bien lo que dijiste, porfavor intenta diciendo numero por numero, ejemplo\n\ncuatro, cuatro, cinco, uno, cero"
+        }
+      },
+      "id": "beccb115-cb2e-4def-9288-87b43c41954d",
+      "createdTime": "2023-09-25T04:28:58.583Z",
+      "updatedTime": "2023-09-25T04:28:58.583Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    }
+  ],
+  "actionDefinitions": [
+    {
+      "timeoutInSeconds": 60,
+      "retryCount": 1,
+      "method": 2,
+      "headers": {
+        "accept": "application/json"
+      },
+      "bodyContent": "{\"text\":\"{3383a6f0-fd17-43ef-9a2c-8afd4b201c8a}\"}",
+      "actionType": "Flow",
+      "flowMetadata": {
+        "id": "0b7352c2-1c5b-ee11-be6f-000d3a9958f3",
+        "title": "Obtiene hospital por CP",
+        "description": "Call this flow from Power Virtual Agents.",
+        "httpMethod": 2,
+        "inputParameters": [
+          {
+            "name": "CP",
+            "id": "text",
+            "type": "String",
+            "optional": false
+          }
+        ],
+        "outputParameters": [
+          {
+            "name": "Hospitales",
+            "id": "hospitales",
+            "type": "String",
+            "optional": true
+          },
+          {
+            "name": "Bool_Hospitales",
+            "id": "bool_hospitales",
+            "type": "Boolean",
+            "optional": true
+          }
+        ],
+        "outputSchemaType": "Json",
+        "createdTime": "2023-09-24T20:56:04Z",
+        "isEnabled": true,
+        "lastModifiedTime": "2023-09-24T21:49:47Z",
+        "versionNumber": 5481169
+      },
+      "id": "dcff7f5e-a204-4756-bb56-e858c921fc45",
+      "displayName": "Obtiene hospital por CP",
+      "description": "Call this flow from Power Virtual Agents.",
+      "createdTime": "2023-09-25T04:26:01.179Z",
+      "updatedTime": "2023-09-25T04:26:01.179Z"
+    }
+  ],
+  "contextVariables": [
+    {
+      "systemType": "None",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "acc986e7-f84b-4e32-a047-72a87d036e7d"
+        ]
+      },
+      "isGlobal": false,
+      "id": "3383a6f0-fd17-43ef-9a2c-8afd4b201c8a",
+      "displayName": "Codigo_Postal",
+      "createdTime": "2023-09-25T04:29:30.6551945Z",
+      "updatedTime": "2023-09-25T06:00:11.490763Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "ffdcb5cb-decc-4a55-84d4-99d710018c16",
+      "initializerType": "Action",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "actionId": "dcff7f5e-a204-4756-bb56-e858c921fc45",
+      "isGlobal": false,
+      "id": "b2aa8e50-fe10-49e8-ae32-c525649a18cb",
+      "displayName": "",
+      "createdTime": "2023-09-25T04:29:30.6551951Z",
+      "updatedTime": "2023-09-25T06:00:11.4907632Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "Boolean",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('b2aa8e50-fe10-49e8-ae32-c525649a18cb')['bool_hospitales']",
+      "isGlobal": false,
+      "id": "dc32b737-276e-42f2-a603-d3d7f04ba46a",
+      "displayName": "Bool_Hospitales",
+      "createdTime": "2023-09-25T04:29:30.6551955Z",
+      "updatedTime": "2023-09-25T06:00:11.4907634Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "jsonTypes": [
+    {
+      "customTypeSchema": "Json",
+      "id": "ffdcb5cb-decc-4a55-84d4-99d710018c16",
+      "displayName": "Response Json Type for Flow - Obtiene hospital por CP",
+      "createdTime": "2023-09-25T04:26:01.18Z",
+      "updatedTime": "2023-09-25T04:26:01.18Z"
+    }
+  ]
+}

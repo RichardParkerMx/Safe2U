@@ -1,0 +1,8 @@
+<botcomponent schemaname="new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart">
+  <componenttype>0</componenttype>
+  <description>Este es el saludo predeterminado de comienzo de charla. Empiece por hacer que su bot o agente virtual se presente a sí mismo. Al crear temas, piense si debe cumplir la legislación local aplicable.</description>
+  <iscustomizable>1</iscustomizable>
+  <name>Saludo</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

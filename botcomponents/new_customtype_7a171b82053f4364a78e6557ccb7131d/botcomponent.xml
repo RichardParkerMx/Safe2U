@@ -1,0 +1,7 @@
+<botcomponent schemaname="new_customtype_7a171b82053f4364a78e6557ccb7131d">
+  <componenttype>3</componenttype>
+  <iscustomizable>1</iscustomizable>
+  <name>Opciones envio de SMS</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>

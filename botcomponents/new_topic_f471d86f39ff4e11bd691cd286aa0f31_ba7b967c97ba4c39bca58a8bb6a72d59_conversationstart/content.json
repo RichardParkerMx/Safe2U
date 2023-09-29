@@ -1,0 +1,292 @@
+{
+  "intents": [
+    {
+      "systemIntentTypes": [
+        "ConversationStart",
+        "Greeting"
+      ],
+      "intentType": "System",
+      "triggerQueries": [
+        "Buenas tardes",
+        "Buenos días",
+        "Hola",
+        "¡Hola, agente!",
+        "Hola, buenos días",
+        "Hola, ¿me puedes ayudar?",
+        "Hola, ¿puedes ayudarme?",
+        "Hola, ¿me puede ayudar?",
+        "Hola, ¿puede ayudarme?",
+        "Hola, amigo",
+        "Hola, buenas tardes",
+        "Hola, buenos días",
+        "Hola, ¿qué tal?",
+        "Hola, ¿cómo estás?",
+        "Hola, ¿qué tal estás?",
+        "Hola, ¿cómo está?",
+        "Hola, necesito ayuda",
+        "Hola, señora",
+        "¡Hola, amigo!",
+        "Hola, señor",
+        "Hola, soporte",
+        "Hola, equipo",
+        "Hola. ¿Cómo está?",
+        "Hola. ¿Qué tal?",
+        "Hola, agente virtual",
+        "¡Hola!",
+        "Hola, ¡buenos días! :)",
+        "Hola, ¡buenas tardes!",
+        "Hola, ¡buenas noches!",
+        "Hola, ¡buenos días!",
+        "Hola, ¿cómo estás hoy?",
+        "Hola, ¿cómo está hoy?",
+        "Hola, ¿qué tal estás hoy?",
+        "Hola, ¿qué tal está hoy?",
+        "Hola, necesito ayuda",
+        "¿Qué tal?",
+        "¡Hola!!",
+        "Hola :)",
+        "Buenos días :)",
+        "Hola, ¿cómo lo llevas?",
+        "Hola, ¿cómo lo lleva?",
+        "Necesito ayuda",
+        "¿Qué pasa?",
+        "Hola.",
+        "Hola, agente",
+        "Hola. ¿Puedes ayudarme?",
+        "Hola. ¿Puede ayudarme?",
+        "Hola, buenas tardes",
+        "Hola, buenos días",
+        "Hola, buenas tardes",
+        "Hola, cómo estás",
+        "Hola, ¿cómo estás?",
+        "Hola, espero que puedas ayudarme.",
+        "Hola, espero que pueda ayudarme.",
+        "Necesito ayuda.",
+        "Necesito ayuda con un tema.",
+        "¡Hola, soporte!",
+        "Hola, equipo de soporte",
+        "¡Saludos!",
+        "¡Hola, agente virtual!"
+      ],
+      "dialogId": "new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart",
+      "isTriggeringEnabled": true,
+      "id": "new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart",
+      "displayName": "Saludo",
+      "description": "Este es el saludo predeterminado de comienzo de charla. Empiece por hacer que su bot o agente virtual se presente a sí mismo. Al crear temas, piense si debe cumplir la legislación local aplicable.",
+      "createdTime": "2019-01-15T00:00:00Z",
+      "updatedTime": "2023-09-26T04:52:44.4008798Z",
+      "createdUserId": "user0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "dialogs": [
+    {
+      "rootNodeId": "8a32ebd1-bec3-4cde-a75a-1977a561b019",
+      "dialogType": "System",
+      "messageNodes": [
+        {
+          "botMessageId": "987e1575-01b0-467b-a98e-33f113cb7dcb",
+          "nodeType": "BotMessageNode",
+          "id": "8a32ebd1-bec3-4cde-a75a-1977a561b019",
+          "defaultTargetNodeId": "2124af69-81a3-4d60-acbd-6113ee0b37ff"
+        },
+        {
+          "botMessageId": "c43afdfc-6fdb-427b-b85f-3715fafc6afa",
+          "nodeType": "BotMessageNode",
+          "id": "ff92666b-4411-453e-8b75-1b58c2e7de8a",
+          "defaultTargetNodeId": "822ea8c8-129e-4caa-b887-0967570488b5"
+        },
+        {
+          "botMessageId": "1d98c879-c3a2-497a-a020-89d54689142b",
+          "nodeType": "BotMessageNode",
+          "id": "2124af69-81a3-4d60-acbd-6113ee0b37ff",
+          "defaultTargetNodeId": "822ea8c8-129e-4caa-b887-0967570488b5"
+        }
+      ],
+      "actionNodes": [
+        {
+          "contextVariableId": "848f8489-4deb-4b1b-92c6-52885e88aa5c",
+          "nodeType": "ActionNode",
+          "inputParameterVariableIdMap": {
+            "text": "{11689c75-c4f3-4d40-af80-fed7ccab9636}"
+          },
+          "id": "c78a3823-2d37-4e00-9422-73dffc24df6f",
+          "routes": [
+            {
+              "expression": "@equals(parameters('11689c75-c4f3-4d40-af80-fed7ccab9636'), '99b05348-ec56-4df2-91e6-79d5710bf086')",
+              "targetNodeId": "bee7578a-1fb6-476d-a6a6-ed1bf1e525ef"
+            },
+            {
+              "expression": "@equals(parameters('11689c75-c4f3-4d40-af80-fed7ccab9636'), '7a836353-6f17-4f25-9905-ea81f05b2259')",
+              "targetNodeId": "27d67ff5-0171-444d-bf41-0827813a4fc7"
+            }
+          ],
+          "defaultTargetNodeId": "ff92666b-4411-453e-8b75-1b58c2e7de8a"
+        }
+      ],
+      "dialogChangeNodes": [
+        {
+          "targetDialogId": "new_topic_ebd4a7a9d0ce478e9d52e239f068c2d4",
+          "nodeType": "DialogChangeNode",
+          "id": "bee7578a-1fb6-476d-a6a6-ed1bf1e525ef"
+        },
+        {
+          "targetDialogId": "new_topic_8373eb4f55944d51b91bf9d752762438",
+          "nodeType": "DialogChangeNode",
+          "id": "27d67ff5-0171-444d-bf41-0827813a4fc7"
+        }
+      ],
+      "questionNodes": [
+        {
+          "contextVariableId": "11689c75-c4f3-4d40-af80-fed7ccab9636",
+          "nodeType": "QuestionNode",
+          "id": "822ea8c8-129e-4caa-b887-0967570488b5",
+          "defaultTargetNodeId": "c78a3823-2d37-4e00-9422-73dffc24df6f"
+        }
+      ],
+      "id": "new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart",
+      "displayName": "Diálogo",
+      "createdTime": "2019-01-15T00:00:00Z",
+      "updatedTime": "2023-09-26T04:52:44.4008787Z",
+      "createdUserId": "user0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "botMessages": [
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "1.Codigo postal\n\n2.Estado, Municipio y Localidad"
+        }
+      },
+      "id": "1b63712f-f373-4db5-8ec9-fb5578e0d2b7",
+      "createdTime": "2023-09-24T08:13:53.052Z",
+      "updatedTime": "2023-09-24T08:13:53.052Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Hola soy Vasconcelos, te ayudare a encontrar el hospital mas cercano de donde te encuentras"
+        }
+      },
+      "id": "987e1575-01b0-467b-a98e-33f113cb7dcb",
+      "createdTime": "2019-01-15T00:00:00Z",
+      "updatedTime": "2019-01-15T00:00:00Z",
+      "createdUserId": "user0",
+      "updatedUserId": "user0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Favor de repetir el metodo, recuerda que las opcciones son"
+        }
+      },
+      "id": "c43afdfc-6fdb-427b-b85f-3715fafc6afa",
+      "createdTime": "2023-09-24T20:31:20.26Z",
+      "updatedTime": "2023-09-24T20:31:20.26Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Localiza tu hospital mas cercano mediante"
+        }
+      },
+      "id": "1d98c879-c3a2-497a-a020-89d54689142b",
+      "createdTime": "2023-09-24T20:32:05.915Z",
+      "updatedTime": "2023-09-24T20:32:05.915Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    }
+  ],
+  "actionDefinitions": [
+    {
+      "timeoutInSeconds": 60,
+      "retryCount": 1,
+      "method": 2,
+      "headers": {
+        "accept": "application/json"
+      },
+      "bodyContent": "{\"text\":\"{11689c75-c4f3-4d40-af80-fed7ccab9636}\"}",
+      "actionType": "Flow",
+      "flowMetadata": {
+        "id": "19ebf8ca-1d5b-ee11-be6f-000d3a9958f3",
+        "title": "Metodo obtenido",
+        "description": "Call this flow from Power Virtual Agents.",
+        "httpMethod": 2,
+        "inputParameters": [
+          {
+            "name": "Metodo",
+            "id": "text",
+            "type": "String",
+            "optional": false
+          }
+        ],
+        "outputSchemaType": "Json",
+        "createdTime": "2023-09-24T21:03:23Z",
+        "isEnabled": true,
+        "lastModifiedTime": "2023-09-24T21:03:30Z",
+        "versionNumber": 5480281
+      },
+      "id": "45347828-3be3-4657-9ba2-f3cdff929868",
+      "displayName": "Metodo obtenido",
+      "description": "Call this flow from Power Virtual Agents.",
+      "createdTime": "2023-09-24T21:03:44.106Z",
+      "updatedTime": "2023-09-24T21:03:44.106Z"
+    }
+  ],
+  "contextVariables": [
+    {
+      "customTypeId": "new_customtype_2a1732484ec04caf97e1f1f82d0c04d4",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "1b63712f-f373-4db5-8ec9-fb5578e0d2b7"
+        ]
+      },
+      "isGlobal": false,
+      "id": "11689c75-c4f3-4d40-af80-fed7ccab9636",
+      "displayName": "metodo",
+      "createdTime": "2023-09-24T08:15:33.4520427Z",
+      "updatedTime": "2023-09-26T04:52:44.4008802Z",
+      "createdUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "7a63ef01-4bd9-40e9-9f2c-d835df33de3d",
+      "initializerType": "Action",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "actionId": "45347828-3be3-4657-9ba2-f3cdff929868",
+      "isGlobal": false,
+      "id": "848f8489-4deb-4b1b-92c6-52885e88aa5c",
+      "displayName": "",
+      "createdTime": "2023-09-24T21:03:44.107Z",
+      "updatedTime": "2023-09-26T04:52:44.4008803Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "jsonTypes": [
+    {
+      "customTypeSchema": "Json",
+      "id": "7a63ef01-4bd9-40e9-9f2c-d835df33de3d",
+      "displayName": "Response Json Type for Flow - Metodo obtenido",
+      "createdTime": "2023-09-24T21:03:44.107Z",
+      "updatedTime": "2023-09-24T21:03:44.107Z"
+    }
+  ]
+}

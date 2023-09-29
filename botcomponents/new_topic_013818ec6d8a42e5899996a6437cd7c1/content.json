@@ -1,0 +1,421 @@
+{
+  "intents": [
+    {
+      "dialogId": "new_topic_013818ec6d8a42e5899996a6437cd7c1",
+      "isTriggeringEnabled": true,
+      "id": "new_topic_013818ec6d8a42e5899996a6437cd7c1",
+      "displayName": "1.1 Envio de SMS (CP)",
+      "createdTime": "2023-09-25T05:03:35.2649309Z",
+      "updatedTime": "2023-09-25T05:48:39.8139227Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "dialogs": [
+    {
+      "rootNodeId": "b081b260-0fd7-48bc-92c0-a65e374c496f",
+      "messageNodes": [
+        {
+          "botMessageId": "5b200cd3-1218-4326-ae2c-a022f30a7364",
+          "nodeType": "BotMessageNode",
+          "id": "498e5bb3-44be-45b4-ade9-0d3969c4b356"
+        },
+        {
+          "botMessageId": "7ac54b70-62d8-4b8f-88a6-73fa7e4c969d",
+          "nodeType": "BotMessageNode",
+          "id": "70b7fe5a-29f1-4c30-99ac-f0f374ed352c",
+          "defaultTargetNodeId": "950c0578-cb2b-44e5-9f2d-235eeaf8d76e"
+        },
+        {
+          "botMessageId": "c6531159-0d4d-4987-b804-ed99f8f2e1c1",
+          "nodeType": "BotMessageNode",
+          "id": "21d3acd8-041c-404e-9e26-742f2e4cf753"
+        },
+        {
+          "botMessageId": "3f54813c-5ea9-40b7-8ea9-fae011752d19",
+          "nodeType": "BotMessageNode",
+          "id": "74d157aa-872a-40cb-aba8-363ef89c355e"
+        }
+      ],
+      "actionNodes": [
+        {
+          "contextVariableId": "18a38d1f-9148-4898-b676-f2654cbfd80b",
+          "nodeType": "ActionNode",
+          "inputParameterVariableIdMap": {
+            "text": "{29d9a789-b768-455c-9fc2-158ef1b2ea21}"
+          },
+          "id": "50868209-657f-46e0-87b6-ad8437dbc564",
+          "defaultTargetNodeId": "950c0578-cb2b-44e5-9f2d-235eeaf8d76e"
+        },
+        {
+          "contextVariableId": "5b757cd0-f573-4139-ae94-258c286ae61b",
+          "nodeType": "ActionNode",
+          "inputParameterVariableIdMap": {
+            "text": "{29d9a789-b768-455c-9fc2-158ef1b2ea21}",
+            "text_1": "{new_variable_4903e92b289c48a29ac9d64d00a1fd1f_75f6e1df43324ca4bda89bb9e7fe2134}"
+          },
+          "outputExpressionVariableIds": [
+            "86993466-7f00-4e7f-9ffa-a98bfb829bae"
+          ],
+          "id": "edda8345-a23a-4b8e-99c3-0e448b930678",
+          "routes": [
+            {
+              "expression": "@equals(parameters('86993466-7f00-4e7f-9ffa-a98bfb829bae'), true)",
+              "targetNodeId": "74d157aa-872a-40cb-aba8-363ef89c355e"
+            }
+          ],
+          "defaultTargetNodeId": "21d3acd8-041c-404e-9e26-742f2e4cf753"
+        }
+      ],
+      "questionNodes": [
+        {
+          "contextVariableId": "4e4f39f7-e65a-4147-abfc-4c614eab5e66",
+          "nodeType": "QuestionNode",
+          "id": "b081b260-0fd7-48bc-92c0-a65e374c496f",
+          "routes": [
+            {
+              "expression": "@equals(parameters('4e4f39f7-e65a-4147-abfc-4c614eab5e66'), 'e3431c30-323f-4017-8750-8933c5f03d34')",
+              "targetNodeId": "560338f3-817c-457f-9f62-39e0499de4ed"
+            },
+            {
+              "expression": "@equals(parameters('4e4f39f7-e65a-4147-abfc-4c614eab5e66'), 'e60eea2b-0f14-4d92-8dde-3aaa3ce595cb')",
+              "targetNodeId": "498e5bb3-44be-45b4-ade9-0d3969c4b356"
+            }
+          ],
+          "defaultTargetNodeId": "498e5bb3-44be-45b4-ade9-0d3969c4b356"
+        },
+        {
+          "contextVariableId": "29d9a789-b768-455c-9fc2-158ef1b2ea21",
+          "nodeType": "QuestionNode",
+          "id": "560338f3-817c-457f-9f62-39e0499de4ed",
+          "defaultTargetNodeId": "50868209-657f-46e0-87b6-ad8437dbc564"
+        },
+        {
+          "contextVariableId": "777cc340-06a3-4c04-9a57-fd5333b5394d",
+          "nodeType": "QuestionNode",
+          "id": "950c0578-cb2b-44e5-9f2d-235eeaf8d76e",
+          "routes": [
+            {
+              "expression": "@equals(parameters('777cc340-06a3-4c04-9a57-fd5333b5394d'), 'e3431c30-323f-4017-8750-8933c5f03d34')",
+              "targetNodeId": "edda8345-a23a-4b8e-99c3-0e448b930678"
+            },
+            {
+              "expression": "@equals(parameters('777cc340-06a3-4c04-9a57-fd5333b5394d'), 'e60eea2b-0f14-4d92-8dde-3aaa3ce595cb')",
+              "targetNodeId": "560338f3-817c-457f-9f62-39e0499de4ed"
+            }
+          ],
+          "defaultTargetNodeId": "70b7fe5a-29f1-4c30-99ac-f0f374ed352c"
+        }
+      ],
+      "id": "new_topic_013818ec6d8a42e5899996a6437cd7c1",
+      "displayName": "Untitled",
+      "createdTime": "2023-09-25T05:03:35.2649296Z",
+      "updatedTime": "2023-09-25T05:48:39.8139216Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "botMessages": [
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Te gustaria recibir la informacion por SMS\n\n1.Si\n\n2.No"
+        }
+      },
+      "id": "cad7367d-cc30-4ca4-a236-6b9623783b0d",
+      "createdTime": "2023-09-25T04:56:48.025Z",
+      "updatedTime": "2023-09-25T04:56:48.025Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Puedes decirme tu numero celular comenzando con la lada y enseguida los 10 digitos de tu numero"
+        }
+      },
+      "id": "0dacd6ff-ecf4-46bb-b046-efa12ecf4044",
+      "createdTime": "2023-09-25T04:58:09.021Z",
+      "updatedTime": "2023-09-25T04:58:09.021Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Confirmas que tu numero es {29d9a789-b768-455c-9fc2-158ef1b2ea21}\n\n1.Si\n\n2.No"
+        }
+      },
+      "id": "9c7a50af-54e7-416d-91f6-9ce54d514b48",
+      "createdTime": "2023-09-25T04:59:03.58Z",
+      "updatedTime": "2023-09-25T04:59:03.58Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Gracias por haber llamado, esperamos te haya sido de utilidad nuestro servicio"
+        }
+      },
+      "id": "5b200cd3-1218-4326-ae2c-a022f30a7364",
+      "createdTime": "2023-09-25T04:57:55.695Z",
+      "updatedTime": "2023-09-25T04:57:55.695Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Perdon no comprendi tu respuesta volvere a preguntar"
+        }
+      },
+      "id": "7ac54b70-62d8-4b8f-88a6-73fa7e4c969d",
+      "createdTime": "2023-09-25T05:02:42.661Z",
+      "updatedTime": "2023-09-25T05:02:42.661Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Lamentablemente por el momento el servicio de envio de SMS no esta disponible, intentalo mas tarde"
+        }
+      },
+      "id": "c6531159-0d4d-4987-b804-ed99f8f2e1c1",
+      "createdTime": "2023-09-25T05:46:44.066Z",
+      "updatedTime": "2023-09-25T05:46:44.066Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    },
+    {
+      "channelContent": {
+        "web": {
+          "contentFormat": "Markdown",
+          "content": "Se envio el SMS con exito, gracias por usar nuestros servicios"
+        }
+      },
+      "id": "3f54813c-5ea9-40b7-8ea9-fae011752d19",
+      "createdTime": "2023-09-25T05:46:49.024Z",
+      "updatedTime": "2023-09-25T05:46:49.024Z",
+      "createdUserId": "user-0",
+      "updatedUserId": "user-0"
+    }
+  ],
+  "actionDefinitions": [
+    {
+      "timeoutInSeconds": 60,
+      "retryCount": 1,
+      "method": 2,
+      "headers": {
+        "accept": "application/json"
+      },
+      "bodyContent": "{\"text\":\"{29d9a789-b768-455c-9fc2-158ef1b2ea21}\"}",
+      "actionType": "Flow",
+      "flowMetadata": {
+        "id": "943f42c5-5d5b-ee11-be6f-000d3a9958f3",
+        "title": "Obtiene Numero",
+        "description": "Call this flow from Power Virtual Agents.",
+        "httpMethod": 2,
+        "inputParameters": [
+          {
+            "name": "Numero",
+            "id": "text",
+            "type": "String",
+            "optional": false
+          }
+        ],
+        "outputSchemaType": "Json",
+        "createdTime": "2023-09-25T04:41:22Z",
+        "isEnabled": true,
+        "lastModifiedTime": "2023-09-25T04:41:27Z",
+        "versionNumber": 5483111
+      },
+      "id": "803a57fe-9b45-4809-987e-bb41562cd5df",
+      "displayName": "Obtiene Numero",
+      "description": "Call this flow from Power Virtual Agents.",
+      "createdTime": "2023-09-25T04:58:39.867Z",
+      "updatedTime": "2023-09-25T04:58:39.867Z"
+    },
+    {
+      "timeoutInSeconds": 60,
+      "retryCount": 1,
+      "method": 2,
+      "headers": {
+        "accept": "application/json"
+      },
+      "bodyContent": "{\"text\":\"{29d9a789-b768-455c-9fc2-158ef1b2ea21}\",\"text_1\":\"{new_variable_4903e92b289c48a29ac9d64d00a1fd1f_75f6e1df43324ca4bda89bb9e7fe2134}\"}",
+      "actionType": "Flow",
+      "flowMetadata": {
+        "id": "a1e19305-045b-ee11-be6f-000d3a9958f3",
+        "title": "Envio de SMS",
+        "description": "Call this flow from Power Virtual Agents.",
+        "httpMethod": 2,
+        "inputParameters": [
+          {
+            "name": "Numero",
+            "id": "text",
+            "type": "String",
+            "optional": false
+          },
+          {
+            "name": "Hospitales",
+            "id": "text_1",
+            "type": "String",
+            "optional": false
+          }
+        ],
+        "outputParameters": [
+          {
+            "name": "Bool_Envio",
+            "id": "bool_envio",
+            "type": "Boolean",
+            "optional": true
+          }
+        ],
+        "outputSchemaType": "Json",
+        "createdTime": "2023-09-24T17:58:54Z",
+        "isEnabled": true,
+        "lastModifiedTime": "2023-09-25T04:55:20Z",
+        "versionNumber": 5483276
+      },
+      "id": "2db01ead-29a7-4734-a678-7936d87fd142",
+      "displayName": "Envio de SMS",
+      "description": "Call this flow from Power Virtual Agents.",
+      "createdTime": "2023-09-25T05:01:19.96Z",
+      "updatedTime": "2023-09-25T05:01:19.96Z"
+    }
+  ],
+  "contextVariables": [
+    {
+      "customTypeId": "new_customtype_7a171b82053f4364a78e6557ccb7131d",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "cad7367d-cc30-4ca4-a236-6b9623783b0d"
+        ]
+      },
+      "isGlobal": false,
+      "id": "4e4f39f7-e65a-4147-abfc-4c614eab5e66",
+      "displayName": "Envio_SMS",
+      "createdTime": "2023-09-25T05:03:35.2649316Z",
+      "updatedTime": "2023-09-25T05:48:39.8139233Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "None",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "0dacd6ff-ecf4-46bb-b046-efa12ecf4044"
+        ]
+      },
+      "isGlobal": false,
+      "id": "29d9a789-b768-455c-9fc2-158ef1b2ea21",
+      "displayName": "Numero",
+      "createdTime": "2023-09-25T05:03:35.2649318Z",
+      "updatedTime": "2023-09-25T05:48:39.8139236Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "new_customtype_7a171b82053f4364a78e6557ccb7131d",
+      "initializerType": "UserQuestion",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": true,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "messages": {
+        "GetValue": [
+          "9c7a50af-54e7-416d-91f6-9ce54d514b48"
+        ]
+      },
+      "isGlobal": false,
+      "id": "777cc340-06a3-4c04-9a57-fd5333b5394d",
+      "displayName": "Confirmar_Numero",
+      "createdTime": "2023-09-25T05:03:35.264932Z",
+      "updatedTime": "2023-09-25T05:48:39.8139238Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "bf8d3c10-dbff-4bcf-b9b7-d9b7183d9595",
+      "initializerType": "Action",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "actionId": "803a57fe-9b45-4809-987e-bb41562cd5df",
+      "isGlobal": false,
+      "id": "18a38d1f-9148-4898-b676-f2654cbfd80b",
+      "displayName": "",
+      "createdTime": "2023-09-25T05:03:35.2649322Z",
+      "updatedTime": "2023-09-25T05:48:39.8139241Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "customTypeId": "d57cf345-3a7b-4122-9f5c-c159c6c2421a",
+      "initializerType": "Action",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "actionId": "2db01ead-29a7-4734-a678-7936d87fd142",
+      "isGlobal": false,
+      "id": "5b757cd0-f573-4139-ae94-258c286ae61b",
+      "displayName": "",
+      "createdTime": "2023-09-25T05:03:35.2649324Z",
+      "updatedTime": "2023-09-25T05:48:39.8139243Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    },
+    {
+      "systemType": "Boolean",
+      "initializerType": "Expression",
+      "scope": "Dialog",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('5b757cd0-f573-4139-ae94-258c286ae61b')['bool_envio']",
+      "isGlobal": false,
+      "id": "86993466-7f00-4e7f-9ffa-a98bfb829bae",
+      "displayName": "Bool_Envio",
+      "createdTime": "2023-09-25T05:03:35.2649325Z",
+      "updatedTime": "2023-09-25T05:48:39.8139245Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ],
+  "jsonTypes": [
+    {
+      "customTypeSchema": "Json",
+      "id": "bf8d3c10-dbff-4bcf-b9b7-d9b7183d9595",
+      "displayName": "Response Json Type for Flow - Obtiene Numero",
+      "createdTime": "2023-09-25T04:58:39.867Z",
+      "updatedTime": "2023-09-25T04:58:39.867Z"
+    },
+    {
+      "customTypeSchema": "Json",
+      "id": "d57cf345-3a7b-4122-9f5c-c159c6c2421a",
+      "displayName": "Response Json Type for Flow - Envio de SMS",
+      "createdTime": "2023-09-25T05:01:19.96Z",
+      "updatedTime": "2023-09-25T05:01:19.96Z"
+    }
+  ]
+}

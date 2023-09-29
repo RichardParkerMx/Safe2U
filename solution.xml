@@ -1,0 +1,160 @@
+<ImportExportXml version="9.2.23083.184" SolutionPackageVersion="9.2" languagecode="3082" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>PowerPlatformHackathonCapgeminiMexico</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Power Platform Hackathon Capgemini Mexico" languagecode="3082" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.1</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>Capgemini</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Capgemini" languagecode="3082" />
+      </LocalizedNames>
+      <Descriptions />
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>cap</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>10000</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="cap_bd_hospitales" behavior="0" />
+      <RootComponent type="29" id="{09f72117-275c-ee11-be6f-000d3a9958f3}" behavior="0" />
+      <RootComponent type="29" id="{0b7352c2-1c5b-ee11-be6f-000d3a9958f3}" behavior="0" />
+      <RootComponent type="29" id="{19ebf8ca-1d5b-ee11-be6f-000d3a9958f3}" behavior="0" />
+      <RootComponent type="29" id="{73fb4973-195c-ee11-be6f-000d3a9958f3}" behavior="0" />
+      <RootComponent type="29" id="{7cd31afa-145c-ee11-be6f-000d3a9958f3}" behavior="0" />
+      <RootComponent type="29" id="{943f42c5-5d5b-ee11-be6f-000d3a9958f3}" behavior="0" />
+      <RootComponent type="29" id="{a1e19305-045b-ee11-be6f-000d3a9958f3}" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_customtype_14dfe4239f304d108a00555d21ded66a,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_customtype_14dfe4239f304d108a00555d21ded66a" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_customtype_2a1732484ec04caf97e1f1f82d0c04d4,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_customtype_2a1732484ec04caf97e1f1f82d0c04d4" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_customtype_7a171b82053f4364a78e6557ccb7131d,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_customtype_7a171b82053f4364a78e6557ccb7131d" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_customtype_97d7fc34029c40bbad79603e4ffcd4d7,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_customtype_97d7fc34029c40bbad79603e4ffcd4d7" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_topic_013818ec6d8a42e5899996a6437cd7c1,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_topic_013818ec6d8a42e5899996a6437cd7c1" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_topic_8373eb4f55944d51b91bf9d752762438,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_topic_8373eb4f55944d51b91bf9d752762438" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_topic_ebd4a7a9d0ce478e9d52e239f068c2d4,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_topic_ebd4a7a9d0ce478e9d52e239f068c2d4" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_topic_fd8d787bc95144e79fe515e87cc5d2e4,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_topic_fd8d787bc95144e79fe515e87cc5d2e4" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_variable_4903e92b289c48a29ac9d64d00a1fd1f_75f6e1df43324ca4bda89bb9e7fe2134,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_variable_4903e92b289c48a29ac9d64d00a1fd1f_75f6e1df43324ca4bda89bb9e7fe2134" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="bot" displayName="msdyn_CustomerServiceTrial_VirtualAgent" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+        <Dependent type="bot_botcomponent" displayName="botcomponentid.schemaname=new_variable_4903e92b289c48a29ac9d64d00a1fd1f_aa5b55414510417197b3dab87aa2d980,botid.schemaname=msdyn_CustomerServiceTrial_VirtualAgent" id.botcomponentid.schemaname="new_variable_4903e92b289c48a29ac9d64d00a1fd1f_aa5b55414510417197b3dab87aa2d980" id.botid.schemaname="msdyn_CustomerServiceTrial_VirtualAgent" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="botcomponent" displayName="new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart" solution="msdyn_CustomerServiceTrialPVA_1034 (1.0.0.0)" id.schemaname="new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart" />
+        <Dependent type="botcomponent" displayName="new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart" id.schemaname="new_topic_f471d86f39ff4e11bd691cd286aa0f31_ba7b967c97ba4c39bca58a8bb6a72d59_conversationstart" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedcommondataserviceforapps_83880" solution="Active" id.connectionreferencelogicalname="new_sharedcommondataserviceforapps_83880" />
+        <Dependent type="29" displayName="Obtiene hospitales por estado" id="{09f72117-275c-ee11-be6f-000d3a9958f3}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedcommondataserviceforapps_83880" solution="Active" id.connectionreferencelogicalname="new_sharedcommondataserviceforapps_83880" />
+        <Dependent type="29" displayName="Obtiene hospital por CP" id="{0b7352c2-1c5b-ee11-be6f-000d3a9958f3}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedcommondataserviceforapps_83880" solution="Active" id.connectionreferencelogicalname="new_sharedcommondataserviceforapps_83880" />
+        <Dependent type="29" displayName="Obtiene localidades" id="{73fb4973-195c-ee11-be6f-000d3a9958f3}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedcommondataserviceforapps_83880" solution="Active" id.connectionreferencelogicalname="new_sharedcommondataserviceforapps_83880" />
+        <Dependent type="29" displayName="Obtiene municipios" id="{7cd31afa-145c-ee11-be6f-000d3a9958f3}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="connectionreference" displayName="new_sharedtwilio_81535" solution="Active" id.connectionreferencelogicalname="new_sharedtwilio_81535" />
+        <Dependent type="29" displayName="Envio de SMS" id="{a1e19305-045b-ee11-be6f-000d3a9958f3}" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

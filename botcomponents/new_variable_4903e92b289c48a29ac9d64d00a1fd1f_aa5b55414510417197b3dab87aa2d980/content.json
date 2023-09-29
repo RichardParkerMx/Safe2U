@@ -1,0 +1,20 @@
+{
+  "contextVariables": [
+    {
+      "systemType": "String",
+      "initializerType": "Expression",
+      "scope": "Session",
+      "greedySlotFillingEnabled": false,
+      "isInput": false,
+      "externalInitializationAllowed": false,
+      "expression": "@parameters('0d665473-6743-402f-9b18-068f9faf28d9')['hospitales_estado']",
+      "isGlobal": true,
+      "id": "new_variable_4903e92b289c48a29ac9d64d00a1fd1f_aa5b55414510417197b3dab87aa2d980",
+      "displayName": "Hospitales_Estado",
+      "createdTime": "2023-09-26T04:50:10.6834518Z",
+      "updatedTime": "2023-09-26T04:50:10.6834519Z",
+      "createdUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3",
+      "updatedUserId": "9fb22ba9-4373-4f97-b779-1e48d3b4baf3"
+    }
+  ]
+}

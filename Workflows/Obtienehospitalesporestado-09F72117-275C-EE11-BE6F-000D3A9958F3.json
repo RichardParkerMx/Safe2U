@@ -1,0 +1,304 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedcommondataserviceforapps_83880"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "manual": {
+          "metadata": {
+            "operationMetadataId": "0bda16b9-2550-4ff4-8dad-a0bd4975a411"
+          },
+          "type": "Request",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "text": {
+                  "title": "Localidad_Seleccionado",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_1": {
+                  "title": "Estado_Confirmado",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                },
+                "text_2": {
+                  "title": "Municipio_COnfirmado",
+                  "type": "string",
+                  "x-ms-dynamically-added": true,
+                  "description": "Please enter your input",
+                  "x-ms-content-hint": "TEXT"
+                }
+              },
+              "required": [
+                "text",
+                "text_1",
+                "text_2"
+              ]
+            }
+          }
+        }
+      },
+      "actions": {
+        "Return_value(s)_to_Power_Virtual_Agents": {
+          "runAfter": {
+            "Condition": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "fdc20d50-c355-419f-9b79-48c3f6c63598"
+          },
+          "type": "Response",
+          "kind": "VirtualAgent",
+          "inputs": {
+            "statusCode": 200,
+            "body": {
+              "hospitales_estado": "@variables('Hospitales')",
+              "bool_hospitales": "@{variables('Encontro_Hospitales')}"
+            },
+            "schema": {
+              "type": "object",
+              "properties": {
+                "hospitales_estado": {
+                  "title": "Hospitales_Estado",
+                  "x-ms-dynamically-added": true,
+                  "type": "string"
+                },
+                "bool_hospitales": {
+                  "title": "Bool_Hospitales",
+                  "x-ms-dynamically-added": true,
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "Encontro_hospitales": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "dc2d504c-f33e-4f50-aa9f-6e0bc56f4e17"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Encontro_Hospitales",
+                "type": "boolean"
+              }
+            ]
+          }
+        },
+        "Hospitales": {
+          "runAfter": {
+            "Numero_de_Hospital": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "a56bf94e-220d-4c8e-8ce5-7d11d9398ac8"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Hospitales",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "Numero_de_Hospital": {
+          "runAfter": {
+            "Encontro_hospitales": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "aec61dbe-1d63-4c20-b103-4fded7e3b150"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Numero_Hospital",
+                "type": "integer",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "Condition": {
+          "actions": {
+            "No_encontro_hospital": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "94f1f2c5-2a2b-49e8-85d3-b646bc1b9fad"
+              },
+              "type": "SetVariable",
+              "inputs": {
+                "name": "Encontro_Hospitales",
+                "value": "@false"
+              }
+            }
+          },
+          "runAfter": {
+            "Hospitales": [
+              "Succeeded"
+            ]
+          },
+          "else": {
+            "actions": {
+              "List_rows": {
+                "runAfter": {},
+                "metadata": {
+                  "operationMetadataId": "14834bfd-9c8f-489b-be6d-962072889433"
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "shared_commondataserviceforapps",
+                    "operationId": "ListRecords",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+                  },
+                  "parameters": {
+                    "entityName": "cap_bd_hospitaleses",
+                    "$select": "cap_estado,cap_municipio,cap_localidad,cap_unidad,cap_domicilio",
+                    "$filter": "cap_estado eq '@{triggerBody()['text_1']}' and cap_municipio eq '@{triggerBody()['text_2']}' and cap_localidad eq '@{substring(triggerBody()['text'],0,sub(length(triggerBody()['text']),1))}'",
+                    "$top": 10
+                  },
+                  "authentication": "@parameters('$authentication')"
+                }
+              },
+              "Condition_2": {
+                "actions": {
+                  "No_encontro_hospital_2": {
+                    "runAfter": {},
+                    "metadata": {
+                      "operationMetadataId": "be4fe97e-c558-4450-828c-20d07baf9e26"
+                    },
+                    "type": "SetVariable",
+                    "inputs": {
+                      "name": "Encontro_Hospitales",
+                      "value": "@false"
+                    }
+                  }
+                },
+                "runAfter": {
+                  "List_rows": [
+                    "Succeeded"
+                  ]
+                },
+                "else": {
+                  "actions": {
+                    "Apply_to_each": {
+                      "foreach": "@outputs('List_rows')?['body/value']",
+                      "actions": {
+                        "Agrega_los_hopitales_encontrados": {
+                          "runAfter": {},
+                          "metadata": {
+                            "operationMetadataId": "25875e2e-1397-48eb-b498-5ba70c790e9e"
+                          },
+                          "type": "AppendToStringVariable",
+                          "inputs": {
+                            "name": "Hospitales",
+                            "value": "@{variables('Numero_Hospital')}.El hospital @{items('Apply_to_each')?['cap_unidad']} con domicilio en @{items('Apply_to_each')?['cap_domicilio']}\n"
+                          }
+                        },
+                        "Increment_variable": {
+                          "runAfter": {
+                            "Agrega_los_hopitales_encontrados": [
+                              "Succeeded"
+                            ]
+                          },
+                          "metadata": {
+                            "operationMetadataId": "5026f872-e183-4913-acc6-dc5686af9fa2"
+                          },
+                          "type": "IncrementVariable",
+                          "inputs": {
+                            "name": "Numero_Hospital",
+                            "value": 1
+                          }
+                        }
+                      },
+                      "runAfter": {},
+                      "metadata": {
+                        "operationMetadataId": "ffb4b8bd-e0dd-41e4-a733-40c1043f9264"
+                      },
+                      "type": "Foreach"
+                    },
+                    "Si_encontro_hospital_": {
+                      "runAfter": {
+                        "Apply_to_each": [
+                          "Succeeded"
+                        ]
+                      },
+                      "metadata": {
+                        "operationMetadataId": "3f6502cd-08d9-4edb-be15-87692ee39622"
+                      },
+                      "type": "SetVariable",
+                      "inputs": {
+                        "name": "Encontro_Hospitales",
+                        "value": "@true"
+                      }
+                    }
+                  }
+                },
+                "expression": {
+                  "equals": [
+                    "@length(outputs('List_rows')?['body/value'])",
+                    0
+                  ]
+                },
+                "metadata": {
+                  "operationMetadataId": "74d61d9e-31cd-4290-b337-d0f522f1dc16"
+                },
+                "type": "If"
+              }
+            }
+          },
+          "expression": {
+            "lessOrEquals": [
+              "@length(triggerBody()['text'])",
+              0
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "71c9d23e-f6de-4cfb-ac4c-6496c9c37395"
+          },
+          "type": "If"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": "c9cd2c4e691a4646adc8aa592c88489b"
+  },
+  "schemaVersion": "1.0.0.0"
+}

@@ -1,0 +1,60 @@
+{
+  "namedEntities": [
+    {
+      "synonyms": [
+        "Guana juato",
+        "Guana ju ato",
+        "Guanaguato"
+      ],
+      "id": "905585c8-354c-4010-8eca-10a88604f941",
+      "displayName": "Guanajuato",
+      "createdTime": "2023-09-24T08:52:34.1945494Z",
+      "updatedTime": "2023-09-24T08:52:34.1945494Z",
+      "createdUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022",
+      "updatedUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022"
+    },
+    {
+      "id": "3b795dd5-1a16-4249-b6e3-11bad9bc03d4",
+      "displayName": "Nuevo Leon",
+      "createdTime": "2023-09-24T08:52:34.1945494Z",
+      "updatedTime": "2023-09-24T08:52:34.1945494Z",
+      "createdUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022",
+      "updatedUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022"
+    },
+    {
+      "id": "220c7321-e5dd-45f4-b7ab-2d364f62e8fe",
+      "displayName": "Aguascalientes",
+      "createdTime": "2023-09-24T08:52:34.1945494Z",
+      "updatedTime": "2023-09-24T08:52:34.1945494Z",
+      "createdUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022",
+      "updatedUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022"
+    },
+    {
+      "id": "dd603c5c-7109-40db-b0d1-86bf8c3ed70b",
+      "displayName": "Estado de Mexico",
+      "createdTime": "2023-09-24T08:52:34.1945494Z",
+      "updatedTime": "2023-09-24T08:52:34.1945494Z",
+      "createdUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022",
+      "updatedUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022"
+    }
+  ],
+  "closedListTypes": [
+    {
+      "namedEntities": [
+        "905585c8-354c-4010-8eca-10a88604f941",
+        "3b795dd5-1a16-4249-b6e3-11bad9bc03d4",
+        "220c7321-e5dd-45f4-b7ab-2d364f62e8fe",
+        "dd603c5c-7109-40db-b0d1-86bf8c3ed70b"
+      ],
+      "smartMatchingEnabled": true,
+      "customTypeSchema": "ClosedList",
+      "id": "new_customtype_14dfe4239f304d108a00555d21ded66a",
+      "displayName": "Estados Mexico",
+      "description": "",
+      "createdTime": "2023-09-24T08:52:34.1945494Z",
+      "updatedTime": "2023-09-24T08:52:34.1945494Z",
+      "createdUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022",
+      "updatedUserId": "b6f48ef8-37c5-4fe3-a60c-fdfd1a2d8022"
+    }
+  ]
+}
